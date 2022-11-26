@@ -1,0 +1,21 @@
+{{ $optBlock := dict "display" "block" }}
+{{- .Params.aside | .RenderString $optBlock -}}
+
+{{ range .Params.links }}
+<a class="aside-link" href="{{ .url }}" target="_blank">
+    <span class="aside-icon">
+        {{ partial "icon" (default "link" .icon) }}
+    </span>
+    <span class="link-text">
+        {{ .name }}
+    </span>
+</a>
+{{ end }}
+
+{{ if .Page.IsDescendant (.Site.GetPage "/projects")}}
+{{ if eq .Page.Parent (.Site.GetPage "/projects")}}
+{{ partial "widgets/project-postlist.html" . }}
+{{ else }}
+{{ partial "widgets/project-backlink.html" . }}
+{{ end }}
+{{ end }}

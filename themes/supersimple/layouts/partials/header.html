@@ -1,0 +1,34 @@
+<header>
+    {{ $currentPage := . }}
+    <div class="header{{ if .Params.hideDate }} no-date{{ end }}">
+        <div class="path-title">
+            <div class="path">
+                {{ $path := split .RelPermalink "/" }}
+                {{ range seq (sub (len $path) 2) }}
+                {{ $item := index $path (sub . 1) }}
+                {{ $path := delimit ($path | first .) "/" }}
+                {{ if ne (trim $item " ") "" }}
+                <a href="{{ $path | urlize }}">{{ $item }}</a>
+                <span class="separator">/</span>
+                {{ end }}
+                {{ end }}
+            </div>
+            <h1>{{ .Title }}</h1>
+        </div>
+        <div class="nav-date">
+            <nav>
+                <ul>
+                    {{ range .Site.Menus.main }}
+                    <li class='{{ if ($currentPage.HasMenuCurrent "main" .) }}child{{ end }} {{ if ($currentPage.IsMenuCurrent "main" .) }}current{{ end }}'>
+                        <a href="{{ .URL }}">{{.Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </nav>
+            {{ if not .Params.hideDate }}
+            <time datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }} class="post-date">Published {{ .Date.Format
+                "Jan 2, 2006"}}</time>
+            {{ end }}
+        </div>
+    </div>
+</header>

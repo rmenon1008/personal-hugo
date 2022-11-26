@@ -1,0 +1,48 @@
+<footer>
+    <div class="footer-image">
+        {{ partial "footer/footer-1.svg" . }}
+    </div>
+    <div class="footer-content">
+        <div class="footer-col col-1">
+            <div class="footer-label">
+                About
+            </div>
+            I’m an undergraduate student at the University of Washington studying electrical engineering. Additionally,
+            I'm interested in robotics, software and design.
+            <div class="footer-spacer"></div>
+            Right now, I work on WISP at the UW Sensor Systems Lab.
+        </div>
+        <div class="footer-col col-2">
+            <div class="footer-label">
+                Pages
+            </div>
+            <ul>
+                {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL }}">{{.Name }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+        <div class="footer-col col-3">
+            <div class="footer-label">
+                Connect
+            </div>
+            <ul>
+                <li><a href="">Email</a></li>
+                <li><a href="">LinkedIn</a></li>
+                <li><a href="">GitHub</a></li>
+                <li><a href="">RSS Feed</a></li>
+            </ul>
+        </div>
+        <div class="footer-col col-4">
+            <a href="#" class="footer-label back-to-top">
+                Back to top
+                <span class="footer-arrow">
+                    {{ partial "icon-thick" "arrow_up" }}
+                </span>
+            </a>
+            <div class="footer-year">
+                {{ now.Format "2006" }} Rohan Menon
+            </div>
+        </div>
+    </div>
+</footer>

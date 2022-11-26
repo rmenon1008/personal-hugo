@@ -1,0 +1,15 @@
+{{ define "main" -}}
+
+<div class="post">
+  {{ $aside := partial "aside.html" .}}
+  {{ if ne (replaceRE "(\\s)" "" $aside) "" }}
+  <aside>
+    {{- partial "aside.html" . -}}
+  </aside>
+  {{ end }}
+  <main class="{{ if .Params.wide }}wide{{ end }}">
+    {{ .Content }}
+  </main>
+</div>
+
+{{- end }}

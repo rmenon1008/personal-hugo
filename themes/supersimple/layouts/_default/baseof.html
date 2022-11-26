@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" {{with .Site.LanguageCode}} xml:lang="{{.}}" lang="{{.}}" {{end}}>
+<html>
+{{- partial "head.html" . -}}
+
+<body>
+    <div class="content">
+        {{- partial "header.html" .}}
+        
+        <div class="post">
+            {{ $aside := partial "aside.html" .}}
+            {{ if ne (replaceRE "(\\s)" "" $aside) "" }}
+            <aside>
+                {{- partial "aside.html" . -}}
+                {{- block "supplemental-aside" . -}}{{- end -}}
+            </aside>
+            {{ end }}
+            <main class="{{ if .Params.wide }}wide{{ end }}">
+                {{/*  {{ .Content }}  */}}
+                {{- block "main" . }}{{- end }}
+            </main>
+        </div>
+        {{- partial "footer.html" . -}}
+    </div>
+</body>
+
+</html>

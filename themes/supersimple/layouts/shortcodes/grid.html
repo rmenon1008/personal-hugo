@@ -1,0 +1,27 @@
+<div class="post-grid">
+   {{ $currentPage := . }}
+   {{ range .Site.Pages }}
+   {{ if and (eq .CurrentSection.Title ($currentPage.Get 0)) }}
+   {{ $pages := .Pages}}
+   {{ range $pages }}
+   
+   <div class="post-grid-item">
+      <a href="{{.RelPermalink}}" class="pgi-link unstyled" data-title="{{.Title}}" style="--bg-color: {{.Params.color}}">
+         {{ if .Params.image }}
+         <img src="{{.Params.image}}" alt="{{.Title}}">
+         {{ end }}
+         <div class="pgi-text">
+            <div class="pgi-title">{{ .Title }}</div>
+            <div class="pgi-desc">{{ .Params.description }}</div>
+         </div>
+      </a>
+   </div>
+   
+   {{ end }}
+   {{ end }}
+   {{ end }}
+   <div class="post-grid-item pgi-invis"></div>
+   <div class="post-grid-item pgi-invis"></div>
+   <div class="post-grid-item pgi-invis"></div>
+   <div class="post-grid-item pgi-invis"></div>
+</div>

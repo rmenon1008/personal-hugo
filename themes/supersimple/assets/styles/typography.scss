@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url("/fonts/Atkinson/AtkinsonHyperlegibleRegular.woff2") format("woff2"),
+        url("/fonts/Atkinson/AtkinsonHyperlegibleRegular.woff") format("woff");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url("/fonts/Atkinson/AtkinsonHyperlegibleItalic.woff2") format("woff2"),
+        url("/fonts/Atkinson/AtkinsonHyperlegibleItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url("/fonts/Atkinson/AtkinsonHyperlegibleBold.woff2") format("woff2"),
+        url("/fonts/Atkinson/AtkinsonHyperlegibleBold.woff") format("woff");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "HoudiniTrio";
+    src: url("/fonts/Houdini/HoudiniTrio.woff2") format("woff2"),
+        url("/fonts/Houdini/HoudiniTrio.woff") format("woff");
+    font-weight: normal;
+}
+
+@mixin header-font {
+    $header-font: "HoudiniTrio",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+    font-family: $header-font;
+    font-weight: normal !important;
+    text-transform: lowercase;
+    letter-spacing: -0.02em;
+}
+
+* {
+    text-decoration-thickness: 0.07em !important;
+    text-underline-offset: 0.08em !important;
+}
+
+p {
+    font-size: 1.25rem;
+    line-height: 1.35;
+}
+
+h1 {
+    @include header-font;
+    font-size: 3.5rem;
+}
+
+a {
+    color: unset;
+    // transition: color $animation-fast;
+
+    svg {
+        stroke-width: 0;
+        stroke: $c0 !important;
+        // transition: fill $animation-fast, stroke $animation-fast
+    }
+
+    &:has(span.icon) {
+        text-decoration: none;
+        
+        .link-text {
+            text-decoration: underline;
+        }
+
+        &:hover {
+            .link-text {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &:hover {
+        color: $p5;
+        text-decoration: none;
+
+        svg {
+            stroke: $p5 !important;
+            fill: $p5 !important;
+        }
+    }
+}
+
+a.unstyled {
+    text-decoration: none !important;
+    color: inherit !important;
+
+    svg {
+        fill: inherit !important;
+    }
+}
+
+.icon {
+    display: inline-block;
+    svg {
+        width: 1.2em;
+        height: 1.2em;
+        margin-bottom: -0.25em;
+    }
+
+    &.icon-thick {
+        svg {
+            stroke-width: 0.04em;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    p {
+        font-size: 1.15rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    p {
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}

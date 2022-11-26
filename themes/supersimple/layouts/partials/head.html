@@ -1,0 +1,28 @@
+<head>
+    <link href="https://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    {{ hugo.Generator }}
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{ if .IsHome -}}
+    <title>{{ .Site.Title }}</title>
+    {{- else -}}
+    <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+    {{- end }}
+    <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+
+    {{ $base := "static/fonts" }}
+    {{ range readDir $base }}
+    {{ $folder := .Name }}
+    {{ range readDir (printf "%s/%s" $base $folder) }}
+    {{ $extension := index (split .Name ".") 1 }}
+    {{ if eq $extension "woff2" }}
+    <link rel="preload" href='{{ printf "/fonts/%s/%s" $folder .Name }}' as="font" type='font/{{ $extension }}' crossorigin>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    {{ $styles := resources.Get "styles/_main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}">
+</head>

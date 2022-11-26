@@ -1,0 +1,71 @@
+.post-grid {
+    $gap: 1.5rem;
+    $posts-per-row: 3;
+
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2.5rem;
+    column-gap: $gap;
+
+    .post-grid-item {
+        flex-basis: calc(#{100% / $posts-per-row} - #{($gap / 2)*($posts-per-row - 1)});
+        flex-grow: 1;
+        height: 100%;
+
+        border-radius: 0.2rem;
+        overflow: hidden;
+
+        &.pgi-invis {
+            height: 0;
+        }
+
+        img {
+            display: block;
+            margin: 0;
+            width: 100%;
+            object-fit: cover;
+            height: 10rem;
+        }
+
+        .pgi-text {
+            background-color: $c9;
+            padding: 1rem;
+
+            .pgi-title {
+                @include header-font;
+                font-size: 1.7rem;
+                padding-bottom: 0.2em;
+            }
+
+            .pgi-desc {
+                font-size: 1.1rem;
+            }
+        }
+
+        &:hover {
+            .pgi-text {
+                background-color: $p3;
+            }
+        }
+    }
+}
+
+figure {
+    margin: 1.5rem 0;
+
+    img {
+        display: block;
+        max-width: 100%;
+        margin: 1rem auto;
+        object-fit: cover;
+
+        border-radius: 0.2rem;
+        overflow: hidden;
+    }
+
+    figcaption {
+        text-align: center;
+        color: $c4;
+        font-style: italic;
+    }
+}
