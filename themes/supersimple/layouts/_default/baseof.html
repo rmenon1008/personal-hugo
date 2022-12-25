@@ -7,7 +7,7 @@
     <div class="content">
         {{- partial "header.html" .}}
         
-        <div class="post">
+        <div class="post" id="main">
             {{ $aside := partial "aside.html" .}}
             {{ if ne (replaceRE "(\\s)" "" $aside) "" }}
             <aside>

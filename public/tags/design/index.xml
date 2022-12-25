@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>design on Rohan Menon</title>
+    <link>http://example.org/tags/design/</link>
+    <description>Recent content in design on Rohan Menon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/tags/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Temperate</title>
+      <link>http://example.org/projects/temperate/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/projects/temperate/</guid>
+      <description>There are countless Chrome Extensions that will replace your new tab page with something new. The problem is that these extensions often try to do too much, sacrificing speed and simplicity.
+Temperate revolves around a large number that displays the current temperature and condition. When you hover over this number, it shows you the forecasted temperature and precipitation for the 24 hours. The weather is one of the most important things I want to see regularly, which is why it’s front and center.</description>
+    </item>
+    
+    <item>
+      <title>Logos</title>
+      <link>http://example.org/projects/logos/</link>
+      <pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/projects/logos/</guid>
+      <description>A club at Columbia University helping tutor people for the US citizenship exam.
+Boutique capital markets solutions without the infrastructure build-up.
+A web based virtual environment for programming education.
+A project to allow for completely private data retrieval from a web server.
+An interactive timeline and blog exploring the connection between athletes and activism.
+A student-run magazine targeted at prep school students, created by a classmate.
+The logo for a Minecraft server for Niskayuna High School.</description>
+    </item>
+    
+    <item>
+      <title>Font Explorations</title>
+      <link>http://example.org/projects/font-explorations/</link>
+      <pubDate>Fri, 26 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/projects/font-explorations/</guid>
+      <description>Houdini Trio is the font used for the headings and path-style text throughout my website. At the moment, it only has the lowercase Latin alphabet along with the forward slash. I’m working on adding numbers and basic punctuation soon.
+It’s a tri-space font, meaning that its letters occupy one of 3 possible widths. For example, the ‘i’, ‘d’, and ‘m’ characters occupy small, medium, and large widths respectively.
+On the site, it’s used alongside Atkinson Hyperlegible for body text.</description>
+    </item>
+    
+  </channel>
+</rss>

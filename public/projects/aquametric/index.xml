@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aquametric on Rohan Menon</title>
+    <link>http://example.org/projects/aquametric/</link>
+    <description>Recent content in Aquametric on Rohan Menon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/projects/aquametric/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Sensor Deployed</title>
+      <link>http://example.org/projects/aquametric/new-sensor-deployed/</link>
+      <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/projects/aquametric/new-sensor-deployed/</guid>
+      <description>Version 2.0 mounted in Lisha Kill
+We have been working on designing and releasing our next sensor version. This one focuses on using more readily available parts and being more versatile depending on the situation in which it is deployed.
+To read more about this sensor’s design and some rough steps to create your own, visit our new guide at guide.aquametric.live. Keep in mind this is still very much a work in progress, so some of the pages may not be complete.</description>
+    </item>
+    
+    <item>
+      <title>Measuring Stream Velocity</title>
+      <link>http://example.org/projects/aquametric/measuring-stream-velocity/</link>
+      <pubDate>Fri, 11 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/projects/aquametric/measuring-stream-velocity/</guid>
+      <description>While stage height can provide useful data to help predict flood events or other localized events, it is sometimes not enough to be able to quantitatively measure how one water body will interact with another.
+The flow rate can provide this data, but in order to measure it, you need to know a) the cross section of the stream, b) the height of the water flowing through that cross section, and c) the velocity of the water.</description>
+    </item>
+    
+    <item>
+      <title>Sensor Underwater</title>
+      <link>http://example.org/projects/aquametric/sensor-underwater/</link>
+      <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/projects/aquametric/sensor-underwater/</guid>
+      <description>Our sensor mysteriously stopped reporting measurements back to us yesterday around 3 am. The battery and cellular strength all seemed to be acceptable, so we were unsure what had happened to it. The last few readings from the sensor show the stream water level rising rapidly, but nothing that we hadn’t seen before in previous rain storms. When we visited the sensor that evening here’s what we saw.
+Yeah, we didn’t see the sensor either.</description>
+    </item>
+    
+    <item>
+      <title>OTA Updates</title>
+      <link>http://example.org/projects/aquametric/ota-updates/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/projects/aquametric/ota-updates/</guid>
+      <description>The frequent trips to the stream for software updates were starting to get tiring, so we sought to implement OTA updates. We also wanted to be able to change the frequency at which our sensor wakes up and takes a measurement (e.g. hourly, every 15 minutes).
+The Particle Electron microcontroller we are using supports OTA updates out of the box, but it does not save flash requests in any kind of queue.</description>
+    </item>
+    
+    <item>
+      <title>First Sensor Data</title>
+      <link>http://example.org/projects/aquametric/first-sensor-data/</link>
+      <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/projects/aquametric/first-sensor-data/</guid>
+      <description>A clear surge and recovery of stream water levels from rain fall
+After deploying our latest sensor version to a small local river, we were able to collect some usable stage data during a pretty big rainstorm.
+Within about an hour of the rainstorm starting, the stage began to climb at a pretty staggering rate. During its rise, we were concerned that our sensor would become submerged at some point, but the water level eventually peaked about 25 cm from the bottom of our sensor.</description>
+    </item>
+    
+    <item>
+      <title>Initial Sensor Versions</title>
+      <link>http://example.org/projects/aquametric/initial-sensor-versions/</link>
+      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/projects/aquametric/initial-sensor-versions/</guid>
+      <description>Version 1 For the first version of our sensor, we focused on developing a device that could take accurate measurements of the water’s stage height. We initially chose an ultrasonic range finder for this purpose. It was oriented towards the water’s surface. By subtracting the measured value from the height at which the sensor was mounted, we could calculate the height of water flowing through the stream.
+We decided to power this device with a solar panel and lithium polymer battery.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,135 +1,176 @@
 @font-face {
-    font-family: "Atkinson Hyperlegible";
-    src: url("/fonts/Atkinson/AtkinsonHyperlegibleRegular.woff2") format("woff2"),
-        url("/fonts/Atkinson/AtkinsonHyperlegibleRegular.woff") format("woff");
-    font-weight: normal;
+  font-family: "Atkinson Hyperlegible";
+  src: url("/fonts/Atkinson/AtkinsonHyperlegibleRegular.woff2") format("woff2"),
+    url("/fonts/Atkinson/AtkinsonHyperlegibleRegular.woff") format("woff");
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: "Atkinson Hyperlegible";
-    src: url("/fonts/Atkinson/AtkinsonHyperlegibleItalic.woff2") format("woff2"),
-        url("/fonts/Atkinson/AtkinsonHyperlegibleItalic.woff") format("woff");
-    font-weight: normal;
-    font-style: italic;
+  font-family: "Atkinson Hyperlegible";
+  src: url("/fonts/Atkinson/AtkinsonHyperlegibleItalic.woff2") format("woff2"),
+    url("/fonts/Atkinson/AtkinsonHyperlegibleItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: "Atkinson Hyperlegible";
-    src: url("/fonts/Atkinson/AtkinsonHyperlegibleBold.woff2") format("woff2"),
-        url("/fonts/Atkinson/AtkinsonHyperlegibleBold.woff") format("woff");
-    font-weight: bold;
+  font-family: "Atkinson Hyperlegible";
+  src: url("/fonts/Atkinson/AtkinsonHyperlegibleBold.woff2") format("woff2"),
+    url("/fonts/Atkinson/AtkinsonHyperlegibleBold.woff") format("woff");
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: "HoudiniTrio";
-    src: url("/fonts/Houdini/HoudiniTrio.woff2") format("woff2"),
-        url("/fonts/Houdini/HoudiniTrio.woff") format("woff");
-    font-weight: normal;
+  font-family: "HoudiniTrio";
+  src: url("/fonts/Houdini/HoudiniTrio.woff2") format("woff2"),
+    url("/fonts/Houdini/HoudiniTrio.woff") format("woff");
+  font-weight: normal;
 }
 
 @mixin header-font {
-    $header-font: "HoudiniTrio",
-    "Helvetica Neue",
-    Helvetica,
-    Arial,
-    sans-serif;
-    font-family: $header-font;
-    font-weight: normal !important;
-    text-transform: lowercase;
-    letter-spacing: -0.02em;
+  $header-font: "HoudiniTrio", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $header-font;
+  font-weight: normal !important;
+  text-transform: lowercase;
 }
 
 * {
-    text-decoration-thickness: 0.07em !important;
-    text-underline-offset: 0.08em !important;
+  text-decoration-thickness: 0.07em !important;
+  text-underline-offset: 0.08em !important;
 }
 
-p {
-    font-size: 1.25rem;
-    line-height: 1.35;
+// main>p,
+// main>li,
+// main>h1,
+// main>h2,
+// main>h3,
+// main>h4,
+// main>h5 {
+//     margin-left: 2rem;
+//     margin-right: 2rem;
+// }
+
+p,
+li {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  color: $c4;
 }
 
 h1 {
-    @include header-font;
-    font-size: 3.5rem;
+  @include header-font;
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 4rem;
 }
 
 a {
-    color: unset;
-    // transition: color $animation-fast;
+  color: unset;
+  // transition: color $animation-fast;
 
-    svg {
-        stroke-width: 0;
-        stroke: $c0 !important;
-        // transition: fill $animation-fast, stroke $animation-fast
-    }
+  svg {
+    stroke-width: 0;
+    stroke: $c0 !important;
+    fill: $c0 !important;
+    // transition: fill $animation-fast, stroke $animation-fast
+  }
 
-    &:has(span.icon) {
-        text-decoration: none;
-        
-        .link-text {
-            text-decoration: underline;
-        }
+  &:has(span.icon) {
+    text-decoration: none;
 
-        &:hover {
-            .link-text {
-                text-decoration: none;
-            }
-        }
+    .link-text {
+      text-decoration: underline;
     }
 
     &:hover {
-        color: $p5;
+      .link-text {
         text-decoration: none;
-
-        svg {
-            stroke: $p5 !important;
-            fill: $p5 !important;
-        }
+      }
     }
+  }
+
+  &:hover {
+    color: $p7;
+    text-decoration: none;
+
+    svg {
+      stroke: $p7 !important;
+      fill: $p7 !important;
+    }
+  }
 }
 
 a.unstyled {
-    text-decoration: none !important;
-    color: inherit !important;
+  text-decoration: none !important;
+  color: inherit !important;
 
-    svg {
-        fill: inherit !important;
-    }
+  svg {
+    fill: $c0 !important;
+  }
+}
+
+a.link-button {
+  display: inline-block;
+  padding: 0.5rem 0.9rem 0.45rem 0.9rem;
+  border-radius: 0.5rem;
+  background-color: $c9;
+  color: $c0;
+  text-decoration: none;
+  font-weight: 600;
+
+  &:has(.icon) {
+    padding-left: 0.7rem;
+  }
+
+  .icon + span {
+    margin-left: 0.25rem;
+  }
+
+  svg {
+    fill: $c0 !important;
+  }
+
+  &:hover {
+    background-color: $p2;
+  }
 }
 
 .icon {
-    display: inline-block;
-    svg {
-        width: 1.2em;
-        height: 1.2em;
-        margin-bottom: -0.25em;
-    }
+  display: inline-block;
 
-    &.icon-thick {
-        svg {
-            stroke-width: 0.04em;
-        }
+  svg {
+    width: 1.2em;
+    height: 1.2em;
+    margin-bottom: -0.25em;
+    fill: $c0 !important;
+  }
+
+  &.icon-thick {
+    svg {
+      stroke-width: 0.04em;
     }
+  }
 }
 
 @media screen and (max-width: 800px) {
-    p {
-        font-size: 1.15rem;
-    }
+  p {
+    font-size: 1.15rem;
+  }
 
-    h1 {
-        font-size: 3rem;
-    }
+  h1 {
+    font-size: 3rem;
+  }
 }
 
-
 @media screen and (max-width: 500px) {
-    p {
-        font-size: 1.1rem;
-    }
+  p {
+    font-size: 1.1rem;
+  }
 
-    h1 {
-        font-size: 2.5rem;
-    }
+  h1 {
+    font-size: 2.5rem;
+  }
 }

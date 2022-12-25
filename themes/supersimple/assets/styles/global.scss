@@ -1,10 +1,6 @@
 $body-font: "Atkinson Hyperlegible";
-
-$animation-slow: 0.5s;
+$border-radius: 0.5rem;
 $animation-fast: 0.15s;
-
-$button-bg: #dfdfdf;
-$button-bg-hover: #cadcca;
 
 $bg: white;
 
@@ -17,15 +13,44 @@ $c5: #787878;
 $c6: #909090;
 $c7: #a8a8a8;
 $c8: #c0c0c0;
-$c9: #e1e1e1;
+$c9: #ececec;
 $c10: #f0f0f0;
 
-$p2: #edfee8;
-$p3: #ccdecf;
-$p4: #8fa993;
-$p5: #426f49;
-$p6: #1a592c;
-$p7: #004516;
-$p8: #001e07;
 
 
+// #0b1a16,#233b32,#395e4f,#51806c,#66a288,#83b59d,#a0c8b3,#bedbc9,#dbeedf
+
+$p1: #dbeedf;
+$p2: #cce7d6;
+$p3: #a0c8b3;
+$p4: #83b59d;
+$p5: #66a288;
+$p6: #51806c;
+$p7: #395e4f;
+$p8: #233b32;
+$p9: #10352a;
+
+
+
+@media (prefers-color-scheme: dark) {
+    $bg: #181818;
+
+    $c0: #ffffff;
+    $c1: #f0f0f0;
+    $c2: #d8d8d8;
+    $c3: #c0c0c0;
+    $c4: #a8a8a8;
+    $c5: #909090;
+    $c6: #787878;
+    $c7: #606060;
+    $c8: #484848;
+    $c9: #303030;
+    $c10: #181818;
+
+    $p3: #043110;
+    $p4: #4e7d5f;
+    $p5: #8cbd9f;
+    $p6: #9ec7a0;
+    $p7: #aeccb4;
+    $p8: #cbedcd;
+}

@@ -4,16 +4,33 @@
         <div class="path-title">
             <div class="path">
                 {{ $path := split .RelPermalink "/" }}
-                {{ range seq (sub (len $path) 2) }}
+                {{ range seq (sub (len $path) 2) -}}
                 {{ $item := index $path (sub . 1) }}
                 {{ $path := delimit ($path | first .) "/" }}
-                {{ if ne (trim $item " ") "" }}
+                {{ if ne (trim $item " ") "" -}}
                 <a href="{{ $path | urlize }}">{{ $item }}</a>
                 <span class="separator">/</span>
-                {{ end }}
-                {{ end }}
+                {{- end }}
+                {{- end }}
             </div>
-            <h1>{{ .Title }}</h1>
+            <div class="title slide-up">
+                {{/* Here for accessibility, but is hidden */}}
+                <h1>{{ .Title }}</h1>
+
+                {{/* Individual letters are separated */}}
+                <div class="letters" arial-hidden="true">
+                    {{ $letters := len .Title }}
+                    {{ $i := 0.0 }}
+                    {{ range split .Title " " -}}
+                    <span class="word">
+                        {{ range split . "" -}}
+                        <span class="letter" style="--index: {{$i}};">{{- . -}}</span>
+                        {{ $i = sub (add $i 1.0) (div $i 15) }}
+                        {{- end }}
+                    </span>
+                    {{- end }}
+                </div>
+            </div>
         </div>
         <div class="nav-date">
             <nav>
@@ -26,7 +43,7 @@
                 </ul>
             </nav>
             {{ if not .Params.hideDate }}
-            <time datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }} class="post-date">Published {{ .Date.Format
+            <time datetime={{ .Date.Format "2006-01-02T15:04:05Z0700" }} class="post-date">Updated {{ .Date.Format
                 "Jan 2, 2006"}}</time>
             {{ end }}
         </div>

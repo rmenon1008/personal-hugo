@@ -1,8 +1,9 @@
 <figure {{ with .Get "class" }} class="{{ . }}"{{ end }}>
+    {{ $src := .Get "src" }}
     {{- if .Get "link" -}}
         <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end -}}
-    <img src="{{ .Get "src" }}"
+    <img src="{{ $src }}"
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
          {{- end -}}
@@ -13,14 +14,16 @@
             {{- else -}}
             width: 100%;
          {{- end -}}
-
          {{ if .Get "height" }}
             height: {{ .Get "height" }};
             {{- else -}}
+            {{ with resources.GetMatch (path.Join "static" $src) }}
+                {{ $calcH := div (mul .Height 42) .Width }}
+                height: {{ $calcH }}rem;
+            {{- end -}}
             max-height: 30rem;
          {{- end -}}
          '
-
     /><!-- Closing img tag -->
     {{- if .Get "link" }}</a>{{ end -}}
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
@@ -29,11 +32,11 @@
                 <h4>{{ . }}</h4>
             {{- end -}}
             {{- if or (.Get "caption") (.Get "attr") -}}<p>
-                {{- .Get "caption" | markdownify -}}
+                {{- .Get "caption" | .Page.RenderString -}}
                 {{- with .Get "attrlink" }}
                     <a href="{{ . }}">
                 {{- end -}}
-                {{- .Get "attr" | markdownify -}}
+                {{- .Get "attr" | .Page.RenderString -}}
                 {{- if .Get "attrlink" }}</a>{{ end }}</p>
             {{- end }}
         </figcaption>

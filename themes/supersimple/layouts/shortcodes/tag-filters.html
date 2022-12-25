@@ -1,0 +1,50 @@
+<div class="tag-filters">
+    <div class="tf-label">Filter</div>
+    {{ if .Get "dateRange" }}
+    {{ $minYear := 1999}}
+    {{ $maxYear := 2099}}
+    {{ range .Site.Pages }}
+    {{ if and .IsPage .Date }}
+    {{ $year := .Date.Format "2006" }}
+    {{ if lt $minYear $year }}
+    {{ $minYear = $year }}
+    {{ end }}
+    {{ if gt $maxYear $year }}
+    {{ $maxYear = $year }}
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    <ul class="tf-year-range">
+        {{ range seq $minYear $maxYear }}
+        <li data-tag="{{ . }}"><a href="?year={{ . }}">{{ . }}</a></li>
+        {{ end }}
+    </ul>
+    <br>
+    {{ end }}
+    <ul>
+        {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+        <li data-tag="{{$name}}"><a href='?tag={{$name}}'>{{replace $name "-" " "}}</a></li>
+        {{end}}
+        {{end}}
+    </ul>
+</div>
+<script>
+    activeFilter = window.location.search.split('tag=')[1] || window.location.search.split('year=')[1];
+    
+    if (activeFilter) {
+        document.querySelectorAll('.tag-filters li').forEach(function (el) {
+            console.log(el.dataset.tag)
+            if (el.dataset.tag == activeFilter) {
+                el.classList.add('active');
+                a_el = el.querySelector('a');
+                a_el.href = window.location.pathname;
+
+                const htmlString = '{{ partial "icon" "x" }}'
+                const svg = document.createElement('svg');
+                svg.innerHTML = htmlString.trim();
+                a_el.insertBefore(svg, a_el.firstChild);
+            }
+        });
+    }
+</script>

@@ -13,8 +13,10 @@
 {{ end }}
 
 {{ if .Page.IsDescendant (.Site.GetPage "/projects")}}
-{{ if eq .Page.Parent (.Site.GetPage "/projects")}}
+{{ if  eq .Page.Parent (.Site.GetPage "/projects")}}
+{{ if ne (len .Pages) 0}}
 {{ partial "widgets/project-postlist.html" . }}
+{{ end }}
 {{ else }}
 {{ partial "widgets/project-backlink.html" . }}
 {{ end }}

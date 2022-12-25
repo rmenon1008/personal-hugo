@@ -1,6 +1,6 @@
 ---
 title: "New Sensor Deployed"
-date: 2020-10-03T16:28:17-07:00
+date: 2020-10-03
 draft: false
 
 color: "#fff9f2"

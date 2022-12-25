@@ -1,9 +1,10 @@
 ---
 title: "Aquametric"
-date: 2022-10-26T16:28:17-07:00
+date: 2020-11-26
 draft: false
 
-description: "A new-tab Chrome extension with the temperature."
+tags: [featured, academic, electronics, software]
+description: "Low cost and distrubuted stream and river monitoring"
 
 image: "/media/aquametric.webp"
 aside: "This project was developed in collaboration with Ian Vernooy. It received a Hackaday Bootstrap Award and was a Finalist for the 2020 Hackaday Prize."

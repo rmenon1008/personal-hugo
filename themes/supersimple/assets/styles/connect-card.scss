@@ -1,0 +1,85 @@
+.connect-card {
+  container-type: inline-size;
+  box-sizing: border-box;
+  padding: 2.5rem;
+  padding-right: 2rem;
+  gap: 2.5rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $p1;
+
+  svg.pfp {
+    flex: 0 0 0;
+    min-width: 30%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin: auto;
+  }
+
+  .cc-details {
+    flex: 1 0 0;
+    width: 70%;
+  }
+
+  h3 {
+    margin: 0;
+    color: $p8;
+    font-size: 2.1rem;
+    font-family: unset;
+    font-weight: 700;
+  }
+
+  b {
+    margin-top: -0.5rem;
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: $p7;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 1.25;
+    color: $p7;
+  }
+
+  .link-button {
+    color: $p8;
+    margin-top: 0.4em;
+    font-size: 0.9rem;
+    font-weight: 400;
+    svg {
+      fill: $p8 !important;
+    }
+    background-color: $p3;
+
+    &:hover {
+      color: $p9;
+      background-color: $p4;
+      svg {
+        fill: $p9 !important;
+      }
+    }
+  }
+}
+
+@container (max-width: 500px) {
+  .connect-card {
+    svg.pfp {
+      margin-bottom: -1rem;
+      min-width: 60%;
+    }
+
+    .cc-details {
+      width: 60%;
+    }
+
+    h3, b {
+      display: block;
+      text-align: center;
+    }
+    b {
+      margin-bottom: 2rem;
+    }
+  }  
+}

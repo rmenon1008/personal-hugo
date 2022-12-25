@@ -1,0 +1,25 @@
+{{ range (.Paginate (.Site.GetPage "/projects").RegularPagesRecursive 1000).Pages }}
+<div class="post-list">
+    <div class="pli" data-tags='{{ range .Parent.GetTerms "tags" }}{{ replace .Name " " "-" }},{{ end }}'
+        data-year='{{ .Date.Format "2006" }}'>
+        <a href="{{.RelPermalink}}" class="pli-link unstyled" data-title="{{.Title}}"
+            style="--bg-color: {{.Params.color}}">
+            {{ if .Params.image }}
+            <div class="pli-img">
+                <img class="batch-load" src="{{.Params.image}}" alt="{{.Title}}">
+            </div>
+            {{ end }}
+            <div class="pli-text">
+                <time class="pli-date">{{.Date.Format "Jan 2, 2006"}}</time>
+                <div class="pli-title">
+                    <div class="pli-title-parent">{{ .Parent.Title }}/</div>
+                    <div class="pli-title-main">{{ .Title }}</div>
+                </div>
+                <div class="pli-desc">{{ .Summary }}</div>
+            </div>
+        </a>
+    </div>
+</div>
+{{ end }}
+{{ partial "scripts/batch-loader" . }}
+{{ template "_internal/pagination.html" . }}

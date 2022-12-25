@@ -1,0 +1,7 @@
+{{ if .Params.summary }}
+{{ .Params.summary }}
+{{ else }}
+{{ $stripped := replaceRE `(?s)<figure.*?>.*?</figure>` "" .Content }}
+{{ (delimit (findRE `(?s)<p.*?>.*?</p>` $stripped) " ") | plainify | safeHTML }}
+{{ end }}
+{{/*  {{ .Summary }}  */}}

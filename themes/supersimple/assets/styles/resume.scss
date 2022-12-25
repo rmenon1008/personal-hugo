@@ -1,0 +1,128 @@
+.resume {
+  display: grid;
+  grid-template-columns: 35fr 65fr;
+  // grid-auto-rows: auto;
+  grid-gap: 2rem;
+
+  .res-section-label h2 {
+    @include header-font;
+    margin: 0;
+    position: sticky;
+    top: 2rem;
+    padding-bottom: 1rem;
+    margin-top: -0.12em;
+    font-size: 2.5rem;
+  }
+
+  .res-section-content {
+    .res-item {
+      display: block;
+      margin-bottom: 4rem;
+      box-sizing: border-box;
+      .res-item-head {
+        display: flex;
+        &>h3 {
+          font-size: 1.25rem;
+          margin: 0;
+          flex-grow: 1;
+        }
+        &>span.res-dates {
+          display: inline-block;
+          padding: 0.25em 0.5em 0.1em 0.5em;
+          border-radius: 0.5em;
+          background-color: $c9;
+          white-space: nowrap;
+          align-self: flex-end;
+          margin-top: -0.23em;
+        }
+      }
+
+      .res-item-body {
+        font-size: 0.8rem;
+        ul {
+          padding-inline-start: 1.5rem;
+          li {
+            margin-bottom: 0.75rem;
+          }
+        }
+      }
+    }
+    a.res-item-head {
+      text-decoration: unset;
+      color: unset;
+      position: relative;
+
+      &:hover {
+        h3 {
+          color: $p7;
+        }
+
+        // &::after {
+        //   // opacity: 1;
+        //   color: $p6;
+        // }
+      }
+
+      .icon {
+        svg {
+          width: 1.1em;
+          height: 1.1em;
+          margin-bottom: -0.2em;
+          fill: $c8 !important;
+          stroke: $c8 !important;
+        }
+      }
+
+      &:hover {
+        .icon svg {
+          fill: $p7 !important;
+          stroke: $p7 !important;
+        }
+      }
+
+      // &::after {
+      //   font-family: inherit;
+      //   content: "❯";
+      //   font-size: 2rem;
+      //   position: absolute;
+      //   right: -2rem;
+      //   top: calc(50% - 0.8em);
+      //   // opacity: 0;
+      //   color: $c8;
+      // }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .resume {
+    grid-template-columns: 1fr;
+    .res-section-label h2 {
+      font-size: 2rem;
+    }
+    .res-section-content {
+      .res-item {
+        .res-item-head {
+          span.res-dates {
+            margin-top: 0.4em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .resume {
+    .res-section-label h2 {
+      font-size: 1.8rem;
+    }
+    .res-section-content .res-item .res-item-head {
+      display: block;
+      span {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

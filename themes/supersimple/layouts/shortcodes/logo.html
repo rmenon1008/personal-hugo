@@ -1,0 +1,8 @@
+<div class="logo">
+    <p>{{ .Get "description" }}</p>
+    <div class="logo-image" {{ with .Get "color" }}style="background-color: {{ . }}" {{ end }}>
+        {{/*  {{ with .Get "href" }}<a href="{{ . }}" class="logo-link unstyled">{{ end }}  */}}
+            <img src="{{ .Get "src" }}" alt="Logo" class="logo-img">
+        {{/*  {{ with .Get "href" }}</a>{{ end }}  */}}
+    </div>
+</div>

@@ -1,25 +1,25 @@
 ---
 title: "Sensor Underwater"
-date: 2022-10-26T16:28:17-07:00
+date: 2020-04-28
 draft: false
 
-# aside: "Left aside"
-color: "#f0f7ff"
+image: "/media/sensor_underwater.webp"
 ---
 
-<!-- <!-- Include image  -->
-![image](/img/new_sensor.webp)
+{{< fig src="/media/sensor_underwater.webp" alt="Inside of an Aquametric device, with moisture">}}
 
-We have been working on designing and releasing our next sensor version. This one focuses on using more readily available parts and being more versatile depending on the situation in which it is deployed.
+Our sensor mysteriously stopped reporting measurements back to us yesterday around 3 am. The battery and cellular strength all seemed to be acceptable, so we were unsure what had happened to it. The last few readings from the sensor show the stream water level rising rapidly, but nothing that we hadn’t seen before in previous rain storms. When we visited the sensor that evening here’s what we saw.
 
-To read more about this sensor’s design and some rough steps to create your own, visit our new guide at guide.aquametric.live. Keep in mind this is still very much a work in progress, so some of the pages may not be complete.
+{{< fig src="/media/sensor_underwater_2.webp" alt="A stream with a high water level with no visible Aquametric sensor">}}
 
-We were planning to install our sensor via a single aluminum rod hammered into the stream bed. When we reached the stream, we realized that this plan was not going to work. The stream bed was extremely rocky. No amount of hammering was going to mount the rod securely enough.
+Yeah, we didn’t see the sensor either. After getting into the river, we found our whole sensor and mounting plate had tipped over and our sensor was entirely submerged under the water. We did not have very high hopes for the sensor, as it had probably been under the water for a good 18 hours by then. But, miraculously, the sensor woke up as usual as soon as we pressed its reset button.
 
-We settled on mounting the sensor to a tree overhanging the stream. Zip ties were used to secure the main device and auxiliary sensor cables to the log. While it may look crude, the sensor is very securely mounted, probably better than many of our other solutions.
+When I later took it apart to inspect the damage, I found that the insides were very moist, but there was no puddle of water or major damage to the internals. We determined that the mounting solution was what needed fixing rather than the device it self. 
 
-In fact the tree mounting has a slight advantage over our other options. Since, there is no mounting parts that enter the water, there is very little for debris to collect around, so we expect to get more stable stage readings from it.
+When we first started the project, our initial idea for mounting was to hammer in a hexagonal aluminum extrusion into the river bed and mount the sensor directly to the top of it. When we came to Alplaus, we found that the rocky bed would not allow us to get the extrusion deep enough to be held securely.
 
-It has only been installed for a week now, but we have already seen some promising data. This shows the stream recovering to normal levels over a few days after a heavy rain.
+Our next solution was a frankenstein of L brackets and an old desktop side cover. This would use rocks to weigh down the metal plate and hold the extrusion upright.
 
+You may be able to see why this design didn’t end up working. As soon as the water level and velocity rises, the metal plate acts like a sail and sends our sensor straight into the water. We need some more stability against tipping. So, continuing with the frankenstien theme, our current plan is to combine the two ideas.
 
+First, we’ll start by using a steel rod and a hammer to create a hole in the river bed. Then the aluminium extrusion will be placed in that hole. And finally, the metal plate will be attached to the pole and have rocks to weight it down to add some stability.

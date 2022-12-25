@@ -1,6 +1,6 @@
 <footer>
     <div class="footer-image">
-        {{ partial "footer/footer-1.svg" . }}
+        {{ partial "svg/footer-1.svg" . }}
     </div>
     <div class="footer-content">
         <div class="footer-col col-1">
@@ -27,10 +27,9 @@
                 Connect
             </div>
             <ul>
-                <li><a href="">Email</a></li>
-                <li><a href="">LinkedIn</a></li>
-                <li><a href="">GitHub</a></li>
-                <li><a href="">RSS Feed</a></li>
+                {{ range .Site.Menus.connect }}
+                <li><a href="{{ .URL }}" target="_blank">{{.Name }}</a></li>
+                {{ end }}
             </ul>
         </div>
         <div class="footer-col col-4">
@@ -46,3 +45,36 @@
         </div>
     </div>
 </footer>
+<div class="cursor-container">
+    <div class="cursor"></div>
+</div>
+<!-- <script>
+    cursorElement = document.querySelector(".cursor");
+    if (cursorElement) {
+        document.body.classList.add("cursor-enabled");
+        document.addEventListener("mousemove", e => {
+            cursorElement.style.top = e.clientY + "px";
+            cursorElement.style.left = e.clientX + "px";
+        });
+    }
+
+    hoverElements = document.querySelectorAll("a, button");
+    if (hoverElements) {
+        hoverElements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const dotSize = rect.height * 0.25 + 30;
+            console.log(rect);
+            element.addEventListener("mouseenter", e => {
+                cursorElement.classList.add("hover");
+                cursorElement.style.width = dotSize + "px";
+                cursorElement.style.height = dotSize + "px";
+            });
+            element.addEventListener("mouseleave", e => {
+                cursorElement.classList.remove("hover");
+                cursorElement.style.width = "";
+                cursorElement.style.height = "";
+            });
+        });
+    }
+
+</script> -->

@@ -1,0 +1,22 @@
+tags = ["featured", "academic", "design", "electronics", "just for fun", "organizations", "software"]
+
+[templates]
+_default = """
+title: 
+date: ##DATE##
+draft: true
+
+image: 
+"""
+projects = """
+title: 
+description:
+date: ##DATE##
+draft: true
+
+image: 
+aside: 
+links: [
+    {name: , url: }
+]
+"""

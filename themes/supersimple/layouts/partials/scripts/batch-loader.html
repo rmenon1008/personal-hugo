@@ -1,0 +1,26 @@
+<script>
+    images = document.querySelectorAll('.batch-load');
+    // set a timeout to make sure the images are loaded
+    setTimeout(function () {
+        images.forEach(function (el) {
+            el.style.opacity = 1;
+        });
+    }, 4000);
+
+    // set up an event listener for when all images are loaded
+    imagesToWaitFor = [...images]
+    imagesToWaitFor.length = images.length > 4 ? 4 : images.length;
+    Promise.all(Array.from(imagesToWaitFor).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
+        images.forEach(function (el) {
+            el.style.opacity = 1;
+        });
+    });
+</script>
+
+<noscript>
+    <style>
+        .batch-load {
+            opacity: 1;
+        }
+    </style>
+</noscript>

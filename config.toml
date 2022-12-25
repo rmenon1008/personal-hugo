@@ -7,3 +7,37 @@ theme = 'supersimple'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[menu]
+[[menu.connect]]
+  name = 'Email'
+  url = 'mailto:rohan@rohanmenon.com'
+  weight = -90
+  target = '_blank'
+
+[[menu.connect]]
+  name = 'LinkedIn'
+  url = 'https://www.linkedin.com/in/rohan-menon-46518415a/'
+  weight = -80
+
+[[menu.connect]]
+  name = 'GitHub'
+  url = 'https://github.com/rmenon1008'
+  weight = -70
+
+[[menu.connect]]
+  name = 'RSS Feed'
+  url = '/index.xml'
+  weight = -60
+
+
+# Static images are mounted to the virtual
+# assets directory. This allows us to use
+# resources.Get to access them.
+[module]
+[[module.mounts]]
+  source = 'static'
+  target = 'assets/static'
+# We use this to compute the image dimensions
+# that are statically set in the HTML to
+# avoid layout shifts.

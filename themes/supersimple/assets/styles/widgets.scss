@@ -13,26 +13,36 @@
 .project-backlink {
     margin-top:3rem;
     display: block;
-    padding: 1rem 1rem 0.80rem 2.5rem;
+    padding: 1rem 1rem 0.70rem 2.5rem;
     // transition: background-color $animation-fast;
     background-color: $c9;
 
-    border-radius: 0.2rem;
+    border-radius: $border-radius;
 
     .backlink-title {
         @include header-font;
-        font-size: 1.8rem;
+        margin-top: 0.2em;
+        font-size: 1.4rem;
     }
 
     &:hover {
-        background-color: $p3;
+        background-color: $p1;
+        .backlink-title {
+            color: $p9;
+        }
+        .widget-label {
+            color: $p9;
+            .icon svg {
+                fill: $p9 !important;
+            }
+        }
     }
 }
 
 
 .project-postlist {
     margin-top:3rem;
-    border-radius: 0.2rem;
+    border-radius: $border-radius;
     overflow: hidden;
     .postlist-label {
         display: block;
@@ -43,9 +53,10 @@
 
     .postlist-item {
         padding: 1rem 1rem 0.80rem 1rem;
-        border-top: solid 1.5px $c0;
+        border-top: solid 1.5px $c8;
 
         display: flex;
+        flex-direction: row-reverse;
         gap: 1rem;
 
         // transition: background-color $animation-fast;
@@ -54,7 +65,15 @@
         backdrop-filter: blur(1rem);
 
         &:hover {
-            background-color: $p3;
+            background-color: $p1;
+            .postlist-item-text {
+                time {
+                    color: $p7;
+                }
+            }
+            .postlist-title {
+                color: $p9;
+            }
         }
 
         img {
@@ -66,6 +85,11 @@
 
         .postlist-item-text {
             align-self: center;
+            flex-grow: 1;
+
+            time {
+                color: $c4;
+            }
         }
 
         .postlist-title {

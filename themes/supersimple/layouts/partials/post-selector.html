@@ -1,0 +1,15 @@
+{{/*  Given: string with this format "section=Projects children=false" or "individual=[/projects/aquametric, /projects/wisp] children=false"  */}}
+{{ dict "context" . "mode" "section" "query" "all" "children" "false" }}
+{{ $p := .context }}
+{{ with .context }}
+    {{ range .Site.Pages }}
+        {{ if .Section }}
+            {{ if eq .Section "Projects" }}
+                {{ if eq .Params.individual "true" }}
+                    {{ $p := . }}
+                    {{ $p.Render "summary" }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}

@@ -1,5 +1,5 @@
 footer {
-    padding-top: 6rem;
+    padding-top: 7rem;
 
     .footer-image {
         width: 100%;
@@ -9,7 +9,7 @@ footer {
         overflow: hidden;
 
         svg {
-            height: 3.5rem;
+            min-height: 3.5rem;
             flex-shrink: 0;
             margin: auto;
 
@@ -22,20 +22,22 @@ footer {
         flex-direction: row;
         column-gap: 3rem;
         row-gap: 1rem;
-        justify-content: space-between;
+        // justify-content: space-between;
 
-        margin: 4rem auto 1rem auto;
+        margin: 4rem auto 0 auto;
         width: 100%;
-        max-width: 1100px;
+        // max-width: 1100px;
 
         line-height: 1.5;
+
+        color: $c4;
 
         .footer-col {
             width: min-content;
 
             .footer-label {
                 @include header-font;
-                font-size: 1.25rem;
+                font-size: 1.5rem;
                 white-space: nowrap;
                 margin-bottom: 0.75em;
             }
@@ -44,10 +46,11 @@ footer {
                 list-style: none;
                 padding: 0;
                 margin-top: -0.5em;
-                line-height: 1.6;
-                // li {
-                //     margin-top: 0.2em;
-                // }
+
+                li {
+                    line-height: 1.6;
+                    font-size: 1rem;
+                }
             }
 
             &.col-1 {
@@ -59,20 +62,34 @@ footer {
                 }
             }
 
-            .footer-year {
-                margin-top: 5.25em;
+            &.col-4 {
+                flex-grow: 1;
                 text-align: right;
-                padding-right: 0.5em;
-            }
-
-            .back-to-top {
-                .footer-arrow {
-                    display: inline-block;
-                    transform: translateY(0.15em);
+                .footer-year {
+                    margin-top: 5.25em;
+                    padding-right: 0.5em;
                 }
-                &:hover {
+
+                .back-to-top {
                     .footer-arrow {
-                        transform: translateY(-0.02em);
+                        display: inline-block;
+                        transform: translateY(0.15em);
+                    }
+
+                    svg {
+                        fill: $c4 !important;
+                        stroke: $c4 !important;
+                    }
+
+                    &:hover {
+                        .footer-arrow {
+                            transform: translateY(-0.02em);
+                        }
+
+                        svg {
+                            fill: $p7 !important;
+                            stroke: $p7 !important;
+                        }
                     }
                 }
             }
