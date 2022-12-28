@@ -1,6 +1,6 @@
 ---
 title: "Athletes for Equal Rights"
-date: 2022-11-29T13:55:44-08:00
+date: 2019-07-12
 draft: false
 
 description: "A logo and interactive timeline"

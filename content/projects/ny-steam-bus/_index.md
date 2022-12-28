@@ -1,6 +1,6 @@
 ---
 title: "NY STEAM Bus"
-date: 2022-11-29T13:55:44-08:00
+date: 2020-07-22
 draft: false
 
 description: "Bringing STEAM lessons to students with a retrofitted school bus"

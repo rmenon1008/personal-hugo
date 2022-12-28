@@ -5,7 +5,10 @@ draft: false
 menu: "main"
 weight: 3
 hideDate: true
+aliases:
+    - /log-book/
 
+description: "An archive of updates to my larger projects"
 aside: "
 Posts serve as updates to some of my larger projects.
 {{< tag-filters dateRange=\"true\" >}}"
