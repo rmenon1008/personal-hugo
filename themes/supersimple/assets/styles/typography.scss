@@ -175,7 +175,12 @@ a.link-button {
       &:hover {
           background-color: #ffffff80;
       }
-  }
+    }
+
+    * ::selection {
+      background-color: $c4;
+      // color: $c0;
+    }
   }
 }
 
