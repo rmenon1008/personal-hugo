@@ -60,7 +60,7 @@
 
   const search = window.location.pathname;
   const slug = search.split("/").pop();
-  var results = sitelist
+  const results = sitelist
     .filter((item) => {
       return (
         similarity(item.link, search) + similarity(item.title, slug) > 0.6
@@ -74,9 +74,8 @@
         similarity(a.link, search) -
         similarity(a.title, slug)
       );
-    });
-
-results.length = 3;
+    })
+    .slice(0, 3);
 
   const resultsDiv = document.getElementById("results");
   if (results.length == 0) {
