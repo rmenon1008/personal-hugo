@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/stats/:path*",
+      "destination": "https://stats.rohanmenon.com/:path*"
+    },
+    {
+      "source": "/stats/:path*/",
+      "destination": "https://stats.rohanmenon.com/:path*/"
+    }
+  ]
+}
