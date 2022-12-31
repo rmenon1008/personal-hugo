@@ -6,10 +6,15 @@
       "permanent": false
     },
     {
-      "source": "/log-book/:path*",
-      "destination": "/projects/:path*",
+      "source": "/log-book/:path*/",
+      "destination": "/projects/:path*/",
       "permanent": false
     },
+    {
+        "source": "/log-book/:path*",
+        "destination": "/projects/:path*",
+        "permanent": false
+      },
     {
       "source": "/wp-content/uploads/2022/09/Low_power_workshop2022.pdf",
       "destination": "/media/workshop_paper.pdf",
@@ -19,6 +24,26 @@
       "source": "/wp-content/uploads/2022/08/Resume-Rohan-Menon-Website.pdf",
       "destination": "/media/resume.pdf",
       "permanent": false
+    },
+    {
+        "source": "/log-book/web-portfolio/loading-images-in-a-grid/",
+        "destination": "/projects/web-portfolio/loading-images-grid/",
+        "permanent": false
+    },
+    {
+        "source": "/log-book/web-portfolio/loading-images-in-a-grid",
+        "destination": "/projects/web-portfolio/loading-images-grid",
+        "permanent": false
+    },
+    {
+        "source": "/log-book/temperate/algorithmically-choose-text-color/",
+        "destination": "/projects/temperate/choosing-text-color/",
+        "permanent": false
+    },
+    {
+        "source": "/log-book/temperate/algorithmically-choose-text-color",
+        "destination": "/projects/temperate/choosing-text-color",
+        "permanent": false
     }
   ]
 }
