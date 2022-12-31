@@ -6,6 +6,11 @@ draft: false
 tags: ["featured", "academic", "electronics", "software"]
 description: "A hybrid approach to sound positioning and recognition."
 
+aliases: [
+    "/projects/resonant/",
+    "/research/resonant/",
+]
+
 image: "/media/resonant.webp"
 aside: "This project was developed in collaboration with Kalin Kochnev and Jacob Yanoff for the 2021 Senior Division GCRSEF. It received Highest Honors in the NY State STANYS science and engineering fair"
 links: [

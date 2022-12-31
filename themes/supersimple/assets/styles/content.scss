@@ -48,6 +48,12 @@ svg.slant-face {
     }
 }
 
+#results {
+    h2 {
+        margin-top: 0;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .post {
         display: block;

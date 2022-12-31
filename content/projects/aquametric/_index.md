@@ -6,6 +6,11 @@ draft: false
 tags: [featured, academic, electronics, software]
 description: "Low cost and distrubuted stream and river monitoring"
 
+aliases: [
+    "/projects/aquametric/",
+    "/research/aquametric/",
+]
+
 image: "/media/aquametric.webp"
 aside: "This project was developed in collaboration with Ian Vernooy. It received a Hackaday Bootstrap Award and was a Finalist for the 2020 Hackaday Prize."
 links: [
