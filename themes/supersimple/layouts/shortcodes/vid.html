@@ -1,0 +1,22 @@
+<figure class="video">
+
+{{ $id :=  (index (seq 1000 | shuffle) 0 ) }}
+
+<video src='{{ .Get "src" }}' id="video{{$id}}"
+{{ if .Get "controls" }}controls{{ end }}
+{{ if .Get "autoplay" }}autoplay muted{{ end }}
+{{ if .Get "muted" }}muted{{ end }}
+{{ if .Get "loop" }}loop{{ end }}
+></video>
+
+{{ if .Get "bar"}}
+<progress class="progress" id="progress{{$id}}" max="100" value="0">Progress</progress>
+
+<script>
+    document.getElementById('video{{$id}}').addEventListener('timeupdate', function() {
+        document.getElementById('progress{{$id}}').value = (100 / document.getElementById('video{{$id}}').duration) * document.getElementById('video{{$id}}').currentTime;
+    });
+</script>
+{{ end }}
+
+</figure>

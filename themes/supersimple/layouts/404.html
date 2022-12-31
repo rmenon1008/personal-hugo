@@ -1,15 +1,5 @@
 {{ define "main" -}}
-
-<div class="post">
-  {{ $aside := partial "aside.html" .}}
-  {{ if ne (replaceRE "(\\s)" "" $aside) "" }}
-  <aside>
-    {{- partial "aside.html" . -}}
-  </aside>
-  {{ end }}
-  <main class="{{ if .Params.wide }}wide{{ end }}">
-    {{ .Content }}
-  </main>
-</div>
-
+{{/*  {{ partial "svg/slant-face.svg" . }}  */}}
+<h2>It may have been moved or deleted</h2>
+<p>Try heading <a href="/">home</a>.</p>
 {{- end }}

@@ -32,6 +32,19 @@
         &.wide {
             width: 100%;
         }
+
+        &.center {
+            width: max-content;
+        }
+    }
+}
+
+svg.slant-face {
+    display: block;
+    width: 100px;
+    margin: auto;
+    .a {
+        fill: $c8 !important;
     }
 }
 

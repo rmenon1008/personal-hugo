@@ -1,51 +1,59 @@
 <header>
-    {{ $currentPage := . }}
-    <div class="header{{ if .Params.hideDate }} no-date{{ end }}">
-        <div class="path-title">
-            <div class="path">
-                {{ $path := split .RelPermalink "/" }}
-                {{ range seq (sub (len $path) 2) -}}
-                {{ $item := index $path (sub . 1) }}
-                {{ $path := delimit ($path | first .) "/" }}
-                {{ if ne (trim $item " ") "" -}}
-                <a href="{{ $path | urlize }}">{{ $item }}</a>
-                <span class="separator">/</span>
-                {{- end }}
-                {{- end }}
-            </div>
-            <div class="title slide-up">
-                {{/* Here for accessibility, but is hidden */}}
-                <h1>{{ .Title }}</h1>
+  {{ $currentPage := . }}
+  <div class="header{{ if .Params.hideDate }} no-date{{ end }}">
+    <div class="path-title">
+      <div class="path">
+        {{ $path := split .RelPermalink "/" }} {{ range seq (sub (len $path) 2)
+        -}} {{ $item := index $path (sub . 1) }} {{ $path := delimit ($path |
+        first .) "/" }} {{ if ne (trim $item " ") "" -}}
+        <a href="{{ $path | urlize }}">{{ $item }}</a>
+        <span class="separator">/</span>
+        {{- end }} {{- end }}
+      </div>
+      <div class="title slide-up">
+        {{ $title := .Title }}
 
-                {{/* Individual letters are separated */}}
-                <div class="letters" arial-hidden="true">
-                    {{ $letters := len .Title }}
-                    {{ $i := 0.0 }}
-                    {{ range split .Title " " -}}
-                    <span class="word">
-                        {{ range split . "" -}}
-                        <span class="letter" style="--index: {{$i}};">{{- . -}}</span>
-                        {{ $i = sub (add $i 1.0) (div $i 15) }}
-                        {{- end }}
-                    </span>
-                    {{- end }}
-                </div>
-            </div>
+        {{/*  Carve out for 404 page  */}}
+        {{/*  Wish I could do it better  */}}
+        {{ if eq .Kind "404" -}}
+        {{ $title = "Page not found" }} 
+        {{- end }}
+
+        {{/* Here for accessibility, but is hidden */}}
+        <h1>{{ $title }}</h1>
+
+        {{/* Individual letters are separated */}}
+        <div class="letters" arial-hidden="true">
+          {{ $letters := len $title }} {{ $i := 0.0 }} {{ range split $title " "
+          -}}
+          <span class="word">
+            {{ range split . "" -}}
+            <span class="letter" style="--index: {{$i}};">{{- . -}}</span>
+            {{ $i = sub (add $i 1.0) (div $i 15) }} {{- end }}
+          </span>
+          {{- end }}
         </div>
-        <div class="nav-date">
-            <nav>
-                <ul>
-                    {{ range .Site.Menus.main }}
-                    <li class='{{ if ($currentPage.HasMenuCurrent "main" .) }}child{{ end }} {{ if ($currentPage.IsMenuCurrent "main" .) }}current{{ end }}'>
-                        <a href="{{ .URL }}">{{.Name }}</a>
-                    </li>
-                    {{ end }}
-                </ul>
-            </nav>
-            {{ if not .Params.hideDate -}}
-            <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}' class="post-date">Updated {{ .Date.Format
-                "Jan 2, 2006" }}</time>
-            {{- end }}
-        </div>
+      </div>
     </div>
+    <div class="nav-date">
+      <nav>
+        <ul>
+          {{ range .Site.Menus.main }}
+          <li
+            class='{{ if ($currentPage.HasMenuCurrent "main" .) }}child{{ end }} {{ if ($currentPage.IsMenuCurrent "main" .) }}current{{ end }}'
+          >
+            <a href="{{ .URL }}">{{.Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </nav>
+      {{ if and (not .Params.hideDate) (ne .Kind "404") -}}
+      <time
+        datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'
+        class="post-date"
+        >Updated {{ .Date.Format "Jan 2, 2006" }}</time
+      >
+      {{- end }}
+    </div>
+  </div>
 </header>

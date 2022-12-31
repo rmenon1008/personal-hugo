@@ -10,9 +10,9 @@
         <div class="post" id="main">
             {{ $aside := partial "aside.html" .}}
             {{ if ne (replaceRE "(\\s)" "" $aside) "" }}
+            {{/*  Only display the aside if it has content  */}}
             <aside>
                 {{- partial "aside.html" . -}}
-                {{- block "supplemental-aside" . -}}{{- end -}}
             </aside>
             {{ end }}
             <main class="{{ if .Params.wide }}wide{{ end }}">
