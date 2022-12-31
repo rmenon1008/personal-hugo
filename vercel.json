@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/umami.js",
-      "destination": "https://stats.rohanmenon.com/umami.js"
-    }
-  ]
-}
