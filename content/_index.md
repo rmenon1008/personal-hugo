@@ -4,6 +4,7 @@ linktitle: "Home"
 date: 2022-10-26
 draft: false
 menu: "main"
+
 hideDate: true
 description: "I’m an undergraduate student at the University of Washington studying electrical engineering. Additionally, I'm interested in robotics, software and design."
 aside: "I’m an undergraduate student at the University of Washington studying electrical engineering. Additionally, I'm interested in robotics, software and design.

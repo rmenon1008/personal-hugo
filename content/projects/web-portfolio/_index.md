@@ -2,12 +2,13 @@
 title: "Web Portfolio"
 date: 2022-11-29T13:55:44-08:00
 draft: false
+tags: ["software", "design" ]
 
 description: "My personal website to blog and showcase projects"
 image: "/media/web-portfolio.webp"
 # aside: ""
 links: [
-    {name: "Theme and content", url: "", icon: "github"},
+    {name: "Theme and content", url: "https://github.com/rmenon1008/personal-hugo", icon: "github"},
 ]
 ---
 {{< fig src="/media/web-portfolio.webp" alt="My personal website to blog and showcase projects" >}}
