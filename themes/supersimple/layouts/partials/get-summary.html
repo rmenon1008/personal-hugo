@@ -4,6 +4,6 @@
 {{ .Description }}
 {{ else }}
 {{ $stripped := replaceRE `(?s)<figure.*?>.*?</figure>` "" .Content }}
-{{ (delimit (findRE `(?s)<p.*?>.*?</p>` $stripped) " ") | plainify | safeHTML }}
+{{ (delimit (findRE `(?s)<p.*?>.*?</p>` $stripped) " ") | plainify | safeHTML | truncate 200 }}
 {{ end }}
 {{/*  {{ .Summary }}  */}}
