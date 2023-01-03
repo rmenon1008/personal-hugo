@@ -17,10 +17,10 @@
          {{ if .Get "height" }}
             height: {{ .Get "height" }};
             {{- else -}}
-            {{ with resources.GetMatch (path.Join "static" $src) }}
+            {{/*  {{ with resources.GetMatch (path.Join "static" $src) }}
                 {{ $calcH := div (mul .Height 42) .Width }}
                 height: {{ $calcH }}rem;
-            {{- end -}}
+            {{- end -}}  */}}
             max-height: 30rem;
          {{- end -}}
          '
