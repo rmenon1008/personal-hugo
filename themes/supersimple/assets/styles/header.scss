@@ -26,10 +26,10 @@ header {
 
                 @keyframes slide-up-kf {
                     0% {
-                        transform: translateY(1.5em) translateX(-0.75em) rotate(70deg);
+                        transform: translateY(0) translateX(0) rotate(0);
                     }
                     100% {
-                        transform: translateY(0);
+                        transform: translateY(1.5em) translateX(-0.75em) rotate(70deg);
                     }
                 }
 
@@ -69,8 +69,9 @@ header {
                                 font-size: var(--font-size);
                                 @include header-font;
                                 display: inline-block;
-                                
+
                                 animation-name: slide-up-kf;
+                                animation-direction: reverse;
                                 animation-duration: 0.7s;
                                 animation-timing-function: cubic-bezier(0.190, 1.000, 0.065, 1.000);
                                 animation-fill-mode: forwards;
