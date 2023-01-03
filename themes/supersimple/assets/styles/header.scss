@@ -25,9 +25,9 @@ header {
                 }
 
                 @keyframes slide-up-kf {
-                    // 0% {
-                    //     transform: translateY(100%);
-                    // }
+                    0% {
+                        transform: translateY(1.5em) translateX(-0.75em) rotate(70deg);
+                    }
                     100% {
                         transform: translateY(0);
                     }
