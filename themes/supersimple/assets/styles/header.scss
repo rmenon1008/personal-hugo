@@ -69,8 +69,11 @@ header {
                                 font-size: var(--font-size);
                                 @include header-font;
                                 display: inline-block;
-
-                                animation: slide-up-kf 0.7s cubic-bezier(0.190, 1.000, 0.065, 1.000) forwards;
+                                
+                                animation-name: slide-up-kf;
+                                animation-duration: 0.7s;
+                                animation-timing-function: cubic-bezier(0.190, 1.000, 0.065, 1.000);
+                                animation-fill-mode: forwards;
                                 animation-delay: calc(var(--index) * 50ms);
 
                                 transform-origin: bottom left;
