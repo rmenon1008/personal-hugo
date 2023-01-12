@@ -1,6 +1,6 @@
 ---
 title: "WISP"
-date: 2022-10-26
+date: 2023-01-12
 draft: false
 
 tags: ["electronics", "academic", "featured", "software"]
@@ -30,4 +30,4 @@ The Wireless Identification and Sensing Platform (WISP) is an extension of stand
 
 WISP devices are tags that can do more than standard RFID, performing computation and taking sensor readings on-board. Tags have been made with temperature sensors, accelerometers and even cameras. The data they capture is sent wirelessly to the reader within close range (up to 5 meters with ideal conditions).
 
-I’ve been working on developing the next generation of WISP (version 6.0) which brings a modular RF board and microcontroller with add-on boards for various sensor types. Additionally, this next generation comes with greater support for usable readers.
+I’ve been working on developing the next generation of WISP (version 6.0) which brings a modular RF board and microcontroller with add-on boards for various sensor types. Additionally, this next generation comes with greater support for usable readers and a new desktop application.
