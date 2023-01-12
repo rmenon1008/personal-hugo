@@ -365,6 +365,10 @@ figure {
       }
     }
   }
+
+  &.drop-shadow img {
+    box-shadow: 0 2px 4px #0000001a, 2px 3px 4px #00000026;
+  }
 }
 
 .logo {
@@ -375,7 +379,7 @@ figure {
 
   .logo-image {
     height: 13rem;
-    background-color: $c9;
+    background-color: #ececec;
 
     .logo-link {
       display: block;
