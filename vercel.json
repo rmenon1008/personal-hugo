@@ -48,7 +48,7 @@
   ],
   "headers": [
     {
-      "source": "/media/*",
+      "source": "/media/:file*",
       "headers": [
         {
           "key": "Cache-Control",
