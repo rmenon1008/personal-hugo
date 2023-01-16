@@ -82,6 +82,17 @@ header {
                             }
                         }
                     }
+
+                    &.no-animate {
+                        .letters {
+                            .word {
+                                .letter {
+                                    animation-play-state: paused;
+                                    animation-delay: -1s;
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
