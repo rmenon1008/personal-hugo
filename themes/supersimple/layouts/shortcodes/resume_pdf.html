@@ -1,0 +1,61 @@
+{{ $optBlock := dict "display" "block" }}
+{{ $p := .Page }}
+<div class="resume-pdf">
+  {{ $r := (.Inner | transform.Unmarshal) }}
+  <div class="res-pdf-row">
+    <div class="col-1">
+    </div>
+    <div class="col-2">
+      <h1>Rohan Menon</h1>
+      <div class="subtitle">he/him · rohanmenon.com · rohan@rohanmenon.com</div>
+      <p>
+        An engineering student deeply interested in embedded devices, sensors,
+        and wireless technologies who thrives in fast-paced, collaborative
+        environments.
+      </p>
+    </div>
+  </div>
+  {{ range $r.resume | last (sub (len $r.resume) 1) -}}
+    <div class="res-pdf-row section-label">
+      <div class="col-1">
+        <h2>{{- .section -}}</h2>
+      </div>
+      <div class="col-2">
+        <hr>
+      </div>
+    </div>
+    <div class="res-pdf-section-content">
+      {{ range .items -}}
+        <div class="res-pdf-row">
+          <div class="col-1">
+            {{ with .date -}}
+              <span class="res-pdf-dates">{{- . -}}</span>
+            {{- end }}
+          </div>
+          <div class="col-2">
+            {{ if .title -}}
+            <h3>
+            {{ if .link -}}
+            <a class="res-pdf-title" href="{{.link}}">
+            {{ else }}
+            <span class="res-pdf-title">
+            {{ end }}
+                {{ .title | $p.RenderString }}
+              {{ if .link -}}
+              </a>
+              {{ else }}
+            </span>
+              {{ end }}
+            </h3>
+            {{- end }}
+            <div class="res-pdf-body">
+              {{ with .description -}}
+                {{ . | $p.RenderString $optBlock }}
+              {{- end }}
+            </div>
+          </div>
+        </div>
+      {{- end }}
+    </div>
+  {{- end }}
+</div>
