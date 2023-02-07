@@ -2,54 +2,61 @@ $body-font: "Atkinson Hyperlegible";
 $border-radius: 0.5rem;
 $animation-fast: 0.15s;
 
-$bg: white;
+@function saturate($color) {
+  @return mix(#fff650, $color, 4%);
+}
+@function saturate2($color) {
+    $darkness: (100% - lightness($color))/100%;
+    $amt: $darkness * $darkness * 18%;
+    @return mix(#24ffa7, $color, $amt);
+  }
 
-$c0: #000000;
-$c1: #181818;
-$c2: #303030;
-$c3: #484848;
-$c4: #606060;
-$c5: #787878;
-$c6: #909090;
-$c7: #a8a8a8;
-$c8: #c0c0c0;
-$c9: #ececec;
-$c10: #f0f0f0;
+$bg: saturate(darken(#ffffff, 6%));
 
-$p1: #dbeedf;
-$p2: #cce7d6;
-$p3: #a0c8b3;
-$p4: #83b59d;
-$p5: #66a288;
-$p6: #51806c;
-$p7: #395e4f;
-$p8: #233b32;
-$p9: #10352a;
+$c0: saturate2(lighten(#0f0f0f, 5%));
+$c1: saturate2(lighten(#141414, 4%));
+$c2: saturate2(lighten(#303030, 3%));
+$c3: saturate2(lighten(#484848, 2%));
+$c4: saturate2(lighten(#606060, 1%));
+$c5: saturate2(darken(#787878, 1%));
+$c6: saturate(darken(#909090, 2%));
+$c7: saturate(darken(#a8a8a8, 3%));
+$c8: saturate(darken(#c0c0c0, 4%));
+$c9: saturate(darken(#ececec, 5%));
+$c10: saturate(darken(#f0f0f0, 6%));
 
-
+$p1: darken(#dbeedf, 5%);
+$p2: darken(#cce7d6, 4%);
+$p3: darken(#a0c8b3, 3%);
+$p4: darken(#83b59d, 2%);
+$p5: darken(#66a288, 1%);
+$p6: lighten(#51806c, 1%);
+$p7: lighten(#395e4f, 2%);
+$p8: lighten(#233b32, 3%);
+$p9: lighten(#10352a, 5%);
 
 @media (prefers-color-scheme: dark) {
-    $bg: #181818;
+  $bg: #181818;
 
-    $c0: #ffffff;
-    $c1: #f0f0f0;
-    $c2: #d8d8d8;
-    $c3: #c0c0c0;
-    $c4: #a8a8a8;
-    $c5: #909090;
-    $c6: #787878;
-    $c7: #606060;
-    $c8: #484848;
-    $c9: #303030;
-    $c10: #181818;
+  $c0: #ffffff;
+  $c1: #f0f0f0;
+  $c2: #d8d8d8;
+  $c3: #c0c0c0;
+  $c4: #a8a8a8;
+  $c5: #909090;
+  $c6: #787878;
+  $c7: #606060;
+  $c8: #484848;
+  $c9: #303030;
+  $c10: #181818;
 
-    $p1: #1c352c;
-    $p2: #233b32;
-    $p3: #395e4f;
-    $p4: #51806c;
-    $p5: #66a288;
-    $p6: #83b59d;
-    $p7: #a0c8b3;
-    $p8: #bedbc9;
-    $p9: #dbeedf;
+  $p1: #1c352c;
+  $p2: #233b32;
+  $p3: #395e4f;
+  $p4: #51806c;
+  $p5: #66a288;
+  $p6: #83b59d;
+  $p7: #a0c8b3;
+  $p8: #bedbc9;
+  $p9: #dbeedf;
 }
