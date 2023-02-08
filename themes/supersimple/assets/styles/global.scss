@@ -3,11 +3,11 @@ $border-radius: 0.5rem;
 $animation-fast: 0.15s;
 
 @function saturate($color) {
-  @return mix(#fff650, $color, 4%);
+  @return mix(#ffcb52, $color, 3%);
 }
 @function saturate2($color) {
     $darkness: (100% - lightness($color))/100%;
-    $amt: $darkness * $darkness * 18%;
+    $amt: $darkness * $darkness * 12%;
     @return mix(#24ffa7, $color, $amt);
   }
 
