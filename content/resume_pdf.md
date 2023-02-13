@@ -32,10 +32,10 @@ title = "UW Sensor Systems Laboratory with Prof. Joshua Smith"
 date = "2022 - Present"
 link = "/projects/wisp"
 description = """
-Worked on WISP, a family of batteryless sensors that are powered by and communicate entirely through UHF RFID power harvesting and backscatter.
-- Developed hardware and embedded firmware for a new generation of WISP sensors and a companion desktop application.
-- Presented our work at EnsSys 2022, a workshop at ACM SenSys
-- R. Menon, R. Gujarathi, A. Saffari, J. Smith, “Wireless Identification and Sensing Platform Version 6.0”, EnsSys 2022
+Worked on [WISP](https://www.rohanmenon.com/projects/wisp/), a family of batteryless sensors that are powered by and communicate entirely through UHF RFID power harvesting and backscatter.
+- Developed hardware and embeddded firmware for a new generation of WISP sensors and a companion desktop application.
+- Presented our work at [EnsSys 2022](https://www.enssys.org/2022/), a workshop at ACM SenSys
+- [R. Menon, R. Gujarathi, A. Saffari, J. Smith, “Wireless Identification and Sensing Platform Version 6.0”, EnsSys 2022](https://dl.acm.org/doi/pdf/10.1145/3560905.3568109)
 """
 
 [[resume.items]]

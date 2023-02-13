@@ -1,13 +1,13 @@
 {{ $optBlock := dict "display" "block" }}
 {{ $p := .Page }}
-<div class="resume-pdf">
+<div class="page">
   {{ $r := (.Inner | transform.Unmarshal) }}
   <div class="res-pdf-row">
     <div class="col-1">
     </div>
     <div class="col-2">
       <h1>Rohan Menon</h1>
-      <div class="subtitle">he/him · rohanmenon.com · rohan@rohanmenon.com</div>
+      <div class="subtitle">he/him · <a href="https://www.rohanmenon.com/">rohanmenon.com</a> · <a href="mailto:rohan@rohanmenon.com">rohan@rohanmenon.com</a></div>
       <p>
         An engineering student deeply interested in embedded devices, sensors,
         and wireless technologies who thrives in fast-paced, collaborative

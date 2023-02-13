@@ -10,7 +10,7 @@ image: "/media/wisp.webp"
 aside: "We recently published a paper on WISP:
 
 
-R. Menon*, R. Gujarathi*, A. Saffari, J. Smith, “[Wireless Identification and Sensing Platform Version 6.0](/media/workshop_paper.pdf)”
+R. Menon*, R. Gujarathi*, A. Saffari, J. Smith, “[Wireless Identification and Sensing Platform Version 6.0](https://dl.acm.org/doi/pdf/10.1145/3560905.3568109)”
 
 
 I presented our work at ACM LP-IoT, 2022 in October.

@@ -1,0 +1,15 @@
+---
+title: Hugo Site
+date: 2023-01-30
+draft: true
+
+---
+
+My website is currently built using [Hugo](https://gohugo.io/), a static site generator. Coming from WordPress, it's been nice to have my entire site fit in a single repository. Like my previous site, I built a custom theme for this one. The Hugo syntax has taken some getting used to, but I've found one way or another to do everything I wanted to. 
+
+## Two column layout
+The previous version of my site didn't take very good advantage of wider displays. On top of that, the related posts and important info sections took up vertical real-estate that pushed the article's content further down. In the new design, those sections are pushed off to the side. Unfortunately, on mobile, these problems remain, but I feel stacking the content is still better than hiding it in a drawer.
+
+
+## Limitations
+While I'm very happy with Hugo, the templating style does feel limiting in some areas. 
