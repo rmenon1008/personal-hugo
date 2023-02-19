@@ -7,7 +7,12 @@
     },
     {
       "source": "/wp-content/uploads/2022/09/Low_power_workshop2022.pdf",
-      "destination": "/media/workshop_paper.pdf",
+      "destination": "https://dl.acm.org/doi/pdf/10.1145/3560905.3568109",
+      "permanent": true
+    },
+    {
+      "source": "/media/workshop_paper.pdf",
+      "destination": "https://dl.acm.org/doi/pdf/10.1145/3560905.3568109",
       "permanent": true
     },
     {
