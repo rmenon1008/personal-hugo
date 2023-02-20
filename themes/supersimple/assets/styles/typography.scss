@@ -161,11 +161,12 @@ a.link-button {
   code {
     border-radius: 0.5rem;
     display: block;
-    padding: 1rem;
+    padding: 0.75rem;
     overflow: auto;
     box-sizing: border-box;
-    background-color: $c2;
-    font-size: 1rem;
+    background-color: $c9;
+    font-size: 0.9rem;
+    line-height: 1.5;
 
     &::-webkit-scrollbar-thumb {
       background-color: #ffffff34;

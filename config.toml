@@ -7,6 +7,17 @@ theme = 'supersimple'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    # style = "solarized-light"
+    style = "manni"
+    tabWidth = 4
 
 [menu]
 [[menu.connect]]

@@ -337,6 +337,10 @@ figure {
   }
 
   &.video {
+    border-radius: $border-radius;
+    overflow: hidden;
+    background-color: $c9;
+
     video {
       width: 100%;
     }
