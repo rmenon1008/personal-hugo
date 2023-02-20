@@ -46,7 +46,7 @@
   }
 
   const sitelist = [
-    {{ range .Site.Pages -}}
+    {{ range where .Site.Pages ".Params.hidden" "ne" true -}}
     {
       title: "{{ .Title }}",
       parent: "{{if .Parent}}{{ .Parent.Title }}{{end}}",

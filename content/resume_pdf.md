@@ -4,6 +4,7 @@ date: 2022-10-26
 draft: false
 weight: 4
 wide: true
+hidden: true
 ---
 
 {{< resume_pdf >}}
