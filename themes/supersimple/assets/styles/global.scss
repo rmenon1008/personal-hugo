@@ -3,7 +3,7 @@ $border-radius: 0.5rem;
 $animation-fast: 0.15s;
 
 @function saturate($color) {
-  @return mix(#ffcb52, $color, 3%);
+  @return mix(#ffcb52, $color, 4%);
 }
 @function saturate2($color) {
     $darkness: (100% - lightness($color))/100%;
@@ -11,7 +11,7 @@ $animation-fast: 0.15s;
     @return mix(#24ffa7, $color, $amt);
   }
 
-$bg: saturate(darken(#ffffff, 6%));
+$bg: mix(#ffe252, (darken(#ffffff, 3%)), 2%);
 
 $c0: saturate2(lighten(#0f0f0f, 5%));
 $c1: saturate2(lighten(#141414, 4%));
@@ -20,10 +20,10 @@ $c3: saturate2(lighten(#484848, 2%));
 $c4: saturate2(lighten(#606060, 1%));
 $c5: saturate2(darken(#787878, 1%));
 $c6: saturate(darken(#909090, 2%));
-$c7: saturate(darken(#a8a8a8, 3%));
-$c8: saturate(darken(#c0c0c0, 4%));
-$c9: saturate(darken(#ececec, 5%));
-$c10: saturate(darken(#f0f0f0, 6%));
+$c7: saturate(darken(#a8a8a8, 2%));
+$c8: saturate(darken(#c0c0c0, 2%));
+$c9: saturate(darken(#ececec, 2%));
+$c10: saturate(darken(#f0f0f0, 3%));
 
 $p1: darken(#dbeedf, 5%);
 $p2: darken(#cce7d6, 4%);
