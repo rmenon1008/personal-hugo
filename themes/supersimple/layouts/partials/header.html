@@ -6,7 +6,11 @@
         {{ $path := split .RelPermalink "/" }} {{ range seq (sub (len $path) 2)
         -}} {{ $item := index $path (sub . 1) }} {{ $path := delimit ($path |
         first .) "/" }} {{ if ne (trim $item " ") "" -}}
+        {{ if $currentPage.GetPage ($path | urlize) }}
         <a href="{{ $path | urlize }}">{{ $item }}</a>
+        {{ else }}
+        <span class="separator">{{ $item }}</span>
+        {{ end }}
         <span class="separator">/</span>
         {{- end }} {{- end }}
       </div>
@@ -62,7 +66,7 @@
       <time
         datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'
         class="post-date"
-        >Updated {{ .Date.Format "Jan 2, 2006" }}</time
+        >Posted {{ .Date.Format "Jan 2, 2006" }}</time
       >
       {{- end }}
     </div>

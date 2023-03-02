@@ -20,7 +20,7 @@
             style="--bg-color: {{.Params.color}}">
             {{ if .Params.image }}
             <div class="pli-img">
-                <img class="batch-load" src="{{.Params.image}}" alt="{{.Title}}" style="transition-delay: {{ mul ($.Scratch.Get "index") 0 }}ms">
+                <img class="batch-load" src="{{.Params.image}}" alt="{{.Title}}" style='transition-delay: {{ mul ($.Scratch.Get "index") 0 }}ms'>
             </div>
             {{ end }}
             <div class="pli-text">
