@@ -3,7 +3,7 @@
    {{ $.Scratch.Set "index" 0 }}
    {{ range .Site.Pages -}}
    {{ if and (eq .CurrentSection.Title ($currentPage.Get 0)) -}}
-   {{ range .Pages -}}
+   {{ range where (where .Pages "Params.hidden" "!=" true) "IsSection" true -}}
    {{ $.Scratch.Set "index" (add ($.Scratch.Get "index") 1) }}
    <div class="pgi" data-tags='{{ range .GetTerms "tags" }}{{ replace .Name " " "-" }},{{ end }}'>
       <a href="{{.RelPermalink}}" class="pgi-link unstyled" data-title="{{.Title}}"

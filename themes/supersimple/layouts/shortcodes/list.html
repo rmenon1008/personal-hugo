@@ -29,7 +29,7 @@
                     {{ if $dispProjects }}
                     <div class="pli-title-main">{{ .Title }}</div>
                     {{ else }}
-                    <div class="pli-title-parent">{{ .Parent.Title }}/</div>
+                    <div class="pli-title-parent">{{ index (last 3 (split .RelPermalink "/")) 0 }}/</div>
                     <div class="pli-title-main">{{ .Title }}</div>
                     {{ end }}
                 </div>

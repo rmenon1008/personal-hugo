@@ -3,7 +3,7 @@
 <html>
 {{- partial "head.html" . -}}
 
-<body>
+<body {{with .File }}data-hugo-markdown="{{ .Path }}"{{ end }}>
     <div class="content">
         {{- partial "header.html" .}}
         
