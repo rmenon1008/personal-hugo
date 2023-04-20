@@ -22,9 +22,11 @@
     <br>
     {{ end }}
     <ul>
-        {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+        {{range $name, $taxonomy := .Site.Taxonomies.tags}}
         {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
-        <li data-tag="{{$name}}"><a href='?tag={{$name}}'>{{replace $name "-" " "}}</a></li>
+        <li data-tag="{{$name}}"><a href='?tag={{$name}}'>
+            {{replace (replace $name "-" " ") "_" "✪ "}}
+        </a></li>
         {{end}}
         {{end}}
     </ul>

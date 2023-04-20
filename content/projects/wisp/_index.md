@@ -3,7 +3,7 @@ title: "WISP"
 date: 2023-01-12
 draft: false
 
-tags: ["electronics", "academic", "featured", "software"]
+tags: ["electronics", "academic", "_featured", "software"]
 description: "RFID tags capable of batteryless computation and sensing"
 
 image: "/media/wisp.webp"

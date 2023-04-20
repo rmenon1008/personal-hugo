@@ -3,7 +3,7 @@ title: "Resonant"
 date: 2021-08-21
 draft: false
 
-tags: ["featured", "academic", "electronics", "software"]
+tags: ["_featured", "academic", "electronics", "software"]
 description: "A hybrid approach to sound positioning and recognition."
 
 aliases: [
