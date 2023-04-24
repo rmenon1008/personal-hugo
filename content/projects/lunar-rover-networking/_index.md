@@ -1,0 +1,23 @@
+---
+title: "Lunar Rover Networking"
+date: 2023-03-31
+draft: true
+
+tags: ["electronics", "software", "_featured"]
+description: "Connectivity-aware routing and mission planning for the moon"
+
+image: "/media/dcgr.webp"
+aside: "This project is a collaboration between the [UW Sensor Systems Lab](https://sensor.cs.washington.edu/) and [Astrobotic](https://www.astrobotic.com/), funded by a NASA ESI grant.
+
+
+I became involved in the winter of 2022."
+---
+{{< fig src="/media/dcgr.webp" alt="Houdini Trio font" >}}
+
+Planned lunar missions promise to bring a host of new robotic and human explorers to the moon. Today, the wireless connectivity needs of these assets are currently largely unmet. And given the cost of deploying infrastructure on the moon, a centralized approach (such as a cellular-style network) may not be feasible for some time.
+
+Instead, we imagine a distributed graph of network agents, running on a variety of lunar assets. Since this network won't be supported by permanent infrastructure, the range of each agent will be relatively small. 
+
+Importantly, these agents will intelligently work to optimize the network to facilitate the transfer of data. By letting agents decide how to physically move and share data with one another, they c
+
+We're exploring how agents 

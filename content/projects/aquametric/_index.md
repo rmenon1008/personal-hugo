@@ -1,6 +1,6 @@
 ---
 title: "Aquametric"
-date: 2020-11-26
+date: 2021-11-26
 draft: false
 
 tags: [_featured, academic, electronics, software]

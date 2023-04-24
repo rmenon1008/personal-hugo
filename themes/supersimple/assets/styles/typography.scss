@@ -27,6 +27,20 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBM_Plex/IBMPlexMono-Regular.woff2") format("woff2"),
+    url("/fonts/IBM_Plex/IBMPlexMono-Regular.woff") format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: italic;
+  src: url("/fonts/IBM_Plex/IBMPlexMono-Italic.woff2") format("woff2"),
+    url("/fonts/IBM_Plex/IBMPlexMono-Italic.woff") format("woff");
+}
+
 @mixin header-font {
   $header-font: "HoudiniTrio", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: $header-font;
@@ -165,8 +179,10 @@ a.link-button {
     overflow: auto;
     box-sizing: border-box;
     background-color: $c9;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.5;
+    font-family: "IBM Plex Mono", monospace;
+    margin-bottom: 2.5rem;
 
     &::-webkit-scrollbar-thumb {
       border-radius: 10rem;
@@ -176,6 +192,16 @@ a.link-button {
           background-color: #ffffff80;
       }
     }
+  }
+}
+
+p {
+  code {
+    background-color: $c9;
+    border-radius: 0.3rem;
+    padding: 0.15rem 0.3rem;
+    font-size: 0.95rem;
+    font-family: "IBM Plex Mono", monospace;
   }
 }
 

@@ -1,6 +1,6 @@
 ---
 title: "Logos"
-date: 2021-09-21
+date: 2019-09-21
 draft: false
 
 tags: ["design", "just for fun"]

@@ -20,7 +20,9 @@ header {
         .path-title {
             .title {
                 margin-top: 1rem;
-                h1 { margin: 0; }
+                h1 {
+                    margin: 0;
+                }
 
                 @keyframes slide-up-kf {
                     0% {
@@ -36,7 +38,6 @@ header {
 
                     h1 {
                         color: transparent;
-                        // color: #00000055;
                         position: absolute;
                         bottom: 0;
 
@@ -52,8 +53,6 @@ header {
                         margin-right: calc(-1 * var(--font-size) * 0.318);
                         pointer-events: none;
                         // overflow: hidden;
-                        
-
 
                         .word {
                             margin-bottom: -0.75rem;
@@ -71,7 +70,7 @@ header {
                                 animation-name: slide-up-kf;
                                 animation-direction: reverse;
                                 animation-duration: 0.7s;
-                                animation-timing-function: cubic-bezier(0.94, 0.00, 0.81, 0.00);
+                                animation-timing-function: cubic-bezier(0.94, 0, 0.81, 0);
                                 animation-fill-mode: forwards;
                                 animation-delay: calc(var(--index) * 50ms);
 
@@ -163,7 +162,6 @@ header {
             position: relative;
 
             .path-title {
-
                 .path {
                     min-height: unset;
 
@@ -205,7 +203,6 @@ header {
 }
 
 @media screen and (max-width: 500px) {
-
     header .header {
         .path-title {
             .path {

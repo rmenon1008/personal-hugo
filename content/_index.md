@@ -6,8 +6,9 @@ draft: false
 menu: "main"
 
 hideDate: true
-description: "I’m an undergraduate student at the University of Washington studying electrical engineering. Additionally, I'm interested in robotics, software and design."
-aside: "I’m an undergraduate student at the University of Washington studying electrical engineering. Additionally, I'm interested in robotics, software and design.
+description: "I’m an undergraduate student at the University of Washington studying electrical engineering. I love working on projects involving electronics, software and design."
+
+aside: "I’m an undergraduate student at the University of Washington studying electrical engineering. I love working on projects involving electronics, software and design.
 
 
 Right now, I work on [WISP](/projects/wisp/) at the [UW Sensor Systems Lab](https://sensor.cs.washington.edu/).
