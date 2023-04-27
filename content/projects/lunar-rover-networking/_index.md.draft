@@ -18,6 +18,6 @@ Planned lunar missions promise to bring a host of new robotic and human explorer
 
 Instead, we imagine a distributed graph of network agents, running on a variety of lunar assets. Since this network won't be supported by permanent infrastructure, the range of each agent will be relatively small. 
 
-Importantly, these agents will intelligently work to optimize the network to facilitate the transfer of data. By letting agents decide how to physically move and share data with one another, they c
+Importantly, these agents will intelligently work to optimize the network to facilitate the transfer of data. By letting agents decide how to physically move and share data with one another, they can improve the bundle latency 
 
 We're exploring how agents 
