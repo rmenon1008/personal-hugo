@@ -23,4 +23,4 @@ links: [
 weight: 1
 ---
 <!-- ## Featured projects -->
-{{< list "/projects/wisp/,/projects/aquametric/,/projects/temperate/" true >}}
+{{< list "/projects/wisp/,/projects/lunar-rover-networking/,/projects/resonant/" true >}}

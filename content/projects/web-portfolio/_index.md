@@ -5,13 +5,13 @@ draft: false
 tags: ["software", "design" ]
 
 description: "My personal website to blog and showcase projects"
-image: "/media/web-portfolio.webp"
+image: "/media/web_portfolio.png"
 # aside: ""
 links: [
     {name: "Theme and content", url: "https://github.com/rmenon1008/personal-hugo", icon: "github"},
 ]
 ---
-{{< fig src="/media/web-portfolio.webp" alt="My personal website to blog and showcase projects" >}}
+{{< fig src="/media/web_portfolio.png" alt="My personal website to blog and showcase projects" >}}
 
 Every few months I feel the urge to completely redo my personal website from the ground up. Each time it has gotten a little closer to how I want my site to function and how I want it to look.
 
