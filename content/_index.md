@@ -11,7 +11,7 @@ description: "I’m an undergraduate student at the University of Washington stu
 aside: "I’m an undergraduate student at the University of Washington studying electrical engineering. I love working on projects involving electronics, software and design.
 
 
-Right now, I work on [WISP](/projects/wisp/) at the [UW Sensor Systems Lab](https://sensor.cs.washington.edu/).
+Right now, I work on the [DCGR](/projects/lunar-rover-networking) and [WISP](/projects/wisp/) projects at the [UW Sensor Systems Lab](https://sensor.cs.washington.edu/).
 <br>
 <br>
 "
