@@ -162,6 +162,8 @@ header {
             position: relative;
 
             .path-title {
+                height: 3.75rem;
+
                 .path {
                     min-height: unset;
 
@@ -206,6 +208,8 @@ header {
 @media screen and (max-width: 500px) {
     header .header {
         .path-title {
+            height: 3.25rem;
+
             .path {
                 font-size: 1.1rem;
             }
@@ -216,6 +220,8 @@ header {
         }
 
         .nav-date {
+            height: 1.5rem;
+
             ul li {
                 font-size: 1.1rem;
             }
