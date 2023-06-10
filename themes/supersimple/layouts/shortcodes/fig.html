@@ -1,4 +1,11 @@
-<figure {{ with .Get "class" }} class="{{ . }}"{{ end }}>
+<figure 
+{{ with .Get "class" }}
+    class="{{ . }}"
+{{ end }}
+{{ with .Get "style" }}
+    style="{{ . }}"
+{{ end }}
+>
     {{ $src := .Get "src" }}
     {{- if .Get "link" -}}
         <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
@@ -22,6 +29,10 @@
                 height: {{ $calcH }}rem;
             {{- end -}}  */}}
             max-height: 30rem;
+         {{- end -}}
+         {{ if .Get "transparent" }}
+            background-color: transparent;
+            border-radius: 0;
          {{- end -}}
          '
     /><!-- Closing img tag -->
