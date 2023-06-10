@@ -41,9 +41,10 @@ header {
                         position: absolute;
                         bottom: 0;
 
-                        &::selection {
-                            color: $c0;
-                        }
+                        // &::selection {
+                        //     // color: $c0;
+                        //     color: transparent;
+                        // }
                     }
 
                     .letters {
