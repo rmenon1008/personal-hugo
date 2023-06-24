@@ -3,14 +3,18 @@ title: "Lunar Rover Networking"
 date: 2023-03-31
 draft: false
 
-tags: ["electronics", "software", "_featured"]
+tags: ["electronics", "software"]
 description: "Connectivity-aware routing and mission planning for the moon"
 
 image: "/media/dcgr.png"
 aside: "This project is a collaboration between the [UW Sensor Systems Lab](https://sensor.cs.washington.edu/) and [Astrobotic](https://www.astrobotic.com/), funded by a NASA ESI grant.
 
 
-I became involved in the winter of 2022."
+I became involved in the winter of 2022, building a simulated environnement for developing routing algorithms that consider the physical movement of network agents and their radios.
+
+
+We [presented our work](https://ieee-ccaa.com/wp-content/uploads/2023/06/26.pdf) at IEEE CCAAW 2023 in June, 2023.
+"
 links: [
     {name: "DTN Simulator", url: "https://github.com/rmenon1008/dcgr_simulation", icon: "github" },
 ]

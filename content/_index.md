@@ -23,4 +23,5 @@ links: [
 weight: 1
 ---
 <!-- ## Featured projects -->
-{{< list "/projects/wisp/,/projects/lunar-rover-networking/,/projects/resonant/" true >}}
+### Recent projects
+{{< list "/projects/aquametric/,/projects/wisp/,/projects/mockupgen/" true >}}

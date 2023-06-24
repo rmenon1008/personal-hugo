@@ -1,10 +1,10 @@
 ---
 title: "Font Explorations"
-date: 2021-03-26
+date: 2022-10-13
 draft: false
 
 tags: ["design", "just for fun"]
-description: "Some fonts created for fun"
+description: "Some fun with type design"
 
 image: "/media/houdini.webp"
 aside: "These fonts were mostly made for fun, so they have extremely limited character sets and are pretty incomplete. Keep that in mind if you download them."

@@ -4,7 +4,7 @@ date: 2023-05-18T16:31:02-07:00
 draft: false
 
 tags: ["design", "software"]
-description: "A tool that generates a 3D device mockup from a screenshot"
+description: "A Python-based CLI that generates a device mockup from a screenshot"
 
 image: "/media/mockupception.png"
 aside: "Install with `pip install mockupgen`

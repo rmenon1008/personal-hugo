@@ -3,6 +3,7 @@ title: "Slim AirTag"
 date: 2023-02-27T23:38:40-08:00
 draft: false
 
+description: "My process slimming an AirTag to fit comfortably in my wallet"
 aside: "My process slimming an AirTag to fit comfortably in my wallet. The final version comes to 4 mm thick."
 links: [
     {name: "Print files", url: "https://www.printables.com/model/413147-slim-airtag-body"}

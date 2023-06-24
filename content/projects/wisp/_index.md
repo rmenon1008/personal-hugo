@@ -3,17 +3,18 @@ title: "WISP"
 date: 2023-01-12
 draft: false
 
-tags: ["electronics", "academic", "_featured", "software"]
-description: "RFID tags capable of batteryless computation and sensing"
+tags: ["electronics", "academic", "software"]
+description: "Hardware and a desktop app for building RFID-based batteryless sensors"
 
 image: "/media/wisp.webp"
-aside: "We recently published a paper on WISP:
+aside: "
+WISP was first developed by Intel Labs Seattle in 2006. It is now developed and maintained by the [UW Sensor Systems Lab](https://sensor.cs.washington.edu/).
 
 
-R. Menon*, R. Gujarathi*, A. Saffari, J. Smith, “[Wireless Identification and Sensing Platform Version 6.0](https://dl.acm.org/doi/pdf/10.1145/3560905.3568109)”
+Version 6.0 of the platform focuses on making development easier with a new modular hardware design and a companion desktop application.
 
 
-I presented our work at ACM LP-IoT, 2022 in October.
+We published a [workshop paper on WISP 6.0](https://dl.acm.org/doi/pdf/10.1145/3560905.3568109), which I presented at ACM LP-IoT in October, 2022.
 <br>
 <br>
 "
@@ -26,8 +27,8 @@ links: [
 
 {{< fig src="/media/wisp.webp" alt="WISP 5.0 device">}}
 
-The Wireless Identification and Sensing Platform (WISP) is an extension of standard RFID. RFID systems typically have two devices, a tag and a reader. When a tag is brought close enough to a reader, the tag wirelessly collects energy from the reader and can send back information. However, typically, tags are pretty limited in what they send. It’s usually only a unique identifier.
+The Wireless Identification and Sensing Platform (WISP) is an RFID-based platform for developing batteryless sensors. RFID systems typically have two devices, a tag and a reader. When a tag is brought close enough to a reader, the tag wirelessly collects energy from the reader and can send back information. However, typically, tags are pretty limited in what they send. It’s usually only a unique identifier.
 
-WISP devices are tags that can do more than standard RFID, performing computation and taking sensor readings on-board. Tags have been made with temperature sensors, accelerometers and even cameras. The data they capture is sent wirelessly to the reader within close range (up to 5 meters with ideal conditions).
+WISP devices are tags that can do more than standard RFID, performing computation and taking sensor readings on-board. Tags have been made with temperature sensors, accelerometers and even cameras. The captured data is sent wirelessly back to a reader within range.
 
-I’ve been working on developing the next generation of WISP (version 6.0) which brings a modular RF board and microcontroller with add-on boards for various sensor types. Additionally, this next generation comes with greater support for usable readers and a new desktop application.
+I’ve been working on developing the next generation of WISP (version 6.0) which brings a modular RF board and microcontroller with add-on boards for various sensor types. Additionally, I developed the new companion desktop application, which simplifies the process of collecting data from WISP devices.

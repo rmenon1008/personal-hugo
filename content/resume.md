@@ -5,6 +5,9 @@ draft: false
 menu: "main"
 weight: 4
 wide: true
+
+# aliases:
+#     - /resume
 ---
 
 {{< resume >}}
