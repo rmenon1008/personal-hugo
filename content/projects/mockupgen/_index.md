@@ -20,7 +20,7 @@ links: [
 ]
 ---
 
-{{< fig src="/media/mockupception.png" alt="Mockupception of a mockup within a mockup, within a mockup, etc." >}}
+{{< fig src="/media/mockupception.png" alt="Mockupception of a mockup within a mockup, within a mockup, etc." caption="Mockupception - 2023" >}}
 
 Device mockups are great for showing off screenshots in a more professional way (and I like using them here on my site), but they can be a pain to make. Typically, they require expensive photo editing software and a lot of manual work.
 
