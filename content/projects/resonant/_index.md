@@ -4,7 +4,7 @@ date: 2021-08-21
 draft: false
 
 tags: ["academic", "electronics", "software"]
-description: "A hybrid approach to sound positioning and recognition."
+description: "A hybrid approach to sound positioning and recognition"
 
 aliases: [
     "/projects/resonant/",
