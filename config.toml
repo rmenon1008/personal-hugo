@@ -15,8 +15,7 @@ theme = 'supersimple'
     lineNos = false
     lineNumbersInTable = true
     noClasses = true
-    # style = "solarized-light"
-    style = "borland"
+    style = "witchhazel"
     tabWidth = 4
 
 [menu]
