@@ -1,0 +1,27 @@
+{{/*  List stack  */}}
+<div class="list-stack">
+    {{ range .Paginator.Pages }}
+    <div class="lsi" data-tags='{{ range .Parent.GetTerms "tags" }}{{ replace .Name " " "-" }},{{ end }}'
+        data-year='{{ .Date.Format "2006" }}'>
+        <a href="{{.RelPermalink}}" class="lsi-link unstyled" data-title="{{.Title}}"
+            style="--bg-color: {{.Params.color}}">
+            <div class="lsi-text">
+                <h2 class="lsi-title">{{ .Title }}</h2>
+                <time class="lsi-date">{{.Date.Format "Jan 2, 2006"}}</time>
+                {{/*  <span class="lsi-tags">
+                    {{ range .GetTerms "tags" }}
+                    <span class="lsi-tag">{{ .Name }}</span>
+                    {{ end }}
+                </span>  */}}
+            </div>
+            {{ if .Params.image }}
+            <div class="lsi-img">
+                <img class="batch-load" src="{{.Params.image}}" alt="{{.Title}}">
+            </div>
+            {{ end }}
+        </a>
+    </div>
+    {{ end }}
+</div>
+{{ partial "pagination.html" . }}
+{{ partial "scripts/batch-loader" . }}

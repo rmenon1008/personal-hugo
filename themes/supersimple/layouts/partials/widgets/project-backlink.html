@@ -1,9 +1,12 @@
-<a href={{.Page.Parent.RelPermalink}} class="unstyled project-backlink">
-    <div class="widget-label">
-        {{ partial "icon" "arrow_left" }}
-        Main project
-    </div>
-    <div class="backlink-title">
-        {{ .Page.Parent.Title }}
-    </div>
-</a>
+{{ if .Page.Params.project }}
+    {{ $project := index (where .Site.Pages ".Title" .Page.Params.project) 0 }}
+    <a href={{$project.RelPermalink}} class="unstyled project-backlink">
+        <div class="widget-label">
+            {{ partial "icon" "arrow_left" }}
+            Main project
+        </div>
+        <div class="backlink-title">
+            {{ $project.Title }}
+        </div>
+    </a>
+{{ end }}

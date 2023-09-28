@@ -1,0 +1,36 @@
+{{/*  List grid  */}}
+{{ $listPage := . }}
+<div class="list-grid">
+    {{ range .Paginator.Pages -}}
+    <div class="lgi">
+        <a href="{{.RelPermalink}}" class="lgi-link">
+            {{ if .Params.image -}}
+            <div class="lgi-img">
+                <img class="batch-load" src="{{ .Params.image }}" alt="{{.Title}}">
+            </div>
+            {{- end }}
+            <div class="lgi-text">
+                {{/*  Title is always shown  */}}
+                <h2 class="lgi-title">{{ .Title }}</h2>
+
+                {{/*  Subtitle is only shown if option enabled  */}}
+                {{ if and $listPage.Params.listShowDesc .Params.description }}
+                <div class="lgi-desc">{{ .Params.description }}</div>
+                {{ end }}
+
+                {{/*  Date is only shown if option enabled  */}}
+                {{ if $listPage.Params.listShowDate}}
+                <div class="lgi-date">{{.Date.Format "Jan 2, 2006"}}</div>
+                {{ end }}
+
+                {{/*  Tags are only shown if option enabled  */}}
+                {{ if $listPage.Params.listShowTags}}
+                <div class="lgi-tags">Tag display not implemented yet</div>
+                {{ end }}
+            </div>
+        </a>
+    </div>
+    {{- end }}
+</div>
+{{ partial "pagination.html" . }}
+{{ partial "scripts/batch-loader" . }}

@@ -41,6 +41,9 @@ theme = 'supersimple'
   url = '/index.xml'
   weight = -60
 
+# [taxonomies]
+#   post-tag = 'post-tags'
+#   project-tag = 'project-tags'
 
 # Static images are mounted to the virtual
 # assets directory. This allows us to use

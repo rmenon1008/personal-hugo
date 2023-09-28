@@ -6,54 +6,45 @@
     margin: 0;
     margin-top: 4rem;
     padding: 0;
-    gap: 1rem;
+    gap: 0.5rem;
 
-    .page-item:last-child,
-    .page-item:first-child {
-        display: none;
-    }
-
-    .page-item:nth-child(2),
-    .page-item:nth-last-child(2) {
-        span {
-            display: none;
-        }
-    }
-
-    .page-item:nth-last-child(2) a::before {
-        vertical-align: 0.2rem;
-        font-weight: bold;
-        content: "〉";
-    }
-
-    .page-item:nth-child(2) a::before {
-        vertical-align: 0.2rem;
-        font-weight: bold;
-        content: "〈";
-    }
-
-    .page-item {
-        a {
-            display: inline-block;
+    .pagination-item {
+        width: 2.5rem;
+        height: 2.5rem;
+        .pagination-link {
+            background-color: $c9;
+            border-radius: $border-small;
+            color: $c2;
+            transition: background-color $animation-fast;
+            display: block;
+            width: 100%;
+            height: 100%;
             text-align: center;
-            font-size: 1.5rem;
-            padding: 0.3rem 0.5rem 0.2rem 0.5rem;
-            width: 1rem;
+            line-height: 2.7rem;
             text-decoration: none;
-            border-radius: 0.5rem;
-            color: $c3 !important
-        }
+            font-size: 1.3rem;
+            box-sizing: border-box;
 
-        &.active {
-            a {
-                background-color: $c9;
+            &.current {
+                color: $bg;
+                background-color: $c8;
+                pointer-events: none;
             }
-        }
 
-        &:not(.disabled):not(.active) a {
             &:hover {
                 background-color: $p2;
             }
         }
+
+        &.pagination-item-next,
+        &.pagination-item-prev {
+            width: 5rem;
+            .pagination-link {
+                line-height: 2.5rem;
+                font-size: 1.7rem;
+            }
+        }
     }
+
+    
 }

@@ -15,11 +15,11 @@ header {
         padding-bottom: 0.75em;
         border-bottom: 2px solid $c0;
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
 
         .path-title {
             .title {
-                margin-top: 1rem;
+                margin-top: -0.2rem;
                 h1 {
                     margin: 0;
                 }
@@ -53,20 +53,27 @@ header {
                         font-size: 0;
                         margin-right: calc(-1 * var(--font-size) * 0.318);
                         pointer-events: none;
+                        user-select: none;
                         // overflow: hidden;
 
                         .word {
                             margin-bottom: -0.75rem;
                             display: inline-block;
                             white-space: nowrap;
+                            // padding: 0.5em;
                             padding-right: calc(var(--font-size) * 0.318);
+                            // margin: -0.5em;
+                            // margin-right: calc(-1 * var(--font-size) * 0.318 - 0.5em);
                             overflow: hidden;
 
                             .letter {
-                                margin-bottom: 0.75rem;
                                 font-size: var(--font-size);
                                 @include header-font;
                                 display: inline-block;
+
+                                padding: 0.5em;
+                                margin: -0.5em;
+                                margin-bottom: calc(-0.5em + 0.75rem);
 
                                 animation-name: slide-up-kf;
                                 animation-direction: reverse;
@@ -97,7 +104,7 @@ header {
             .path {
                 @include header-font;
                 font-size: $font-size;
-                display: flex;
+                display: none;
                 color: $c5;
                 min-height: 1.15em;
 
@@ -147,7 +154,8 @@ header {
                 white-space: nowrap;
                 position: absolute;
                 right: 0;
-                bottom: 0;
+                bottom: -3px;
+                color: $c2;
             }
         }
     }

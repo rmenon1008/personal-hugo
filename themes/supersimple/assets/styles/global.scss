@@ -1,6 +1,7 @@
 $body-font: "Atkinson Hyperlegible";
-$border-radius: 0.5rem;
-$animation-fast: 0.15s;
+$border-small: 0.3rem;
+$border-big: 0.5rem;
+$animation-fast: 0.12s;
 
 @function saturate($color) {
   @return mix(#ffcb52, $color, 4%);

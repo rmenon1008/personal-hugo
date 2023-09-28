@@ -22,12 +22,9 @@ footer {
         flex-direction: row;
         column-gap: 3rem;
         row-gap: 1rem;
-        // justify-content: space-between;
 
         margin: 4rem auto 0 auto;
         width: 100%;
-        // max-width: 1100px;
-
         line-height: 1.5;
 
         color: $c4;
@@ -72,9 +69,10 @@ footer {
 
                 .back-to-top {
                     .footer-arrow {
+                        margin-left: 0.1em;
                         display: inline-block;
                         transition: transform 0.15s ease-in-out;
-                        transform: translateY(0.15em);
+                        transform: translateY(0.07em);
                     }
 
                     svg {
@@ -84,7 +82,7 @@ footer {
 
                     &:hover {
                         .footer-arrow {
-                            transform: translateY(-0.02em);
+                            transform: translateY(-0.10em);
                         }
 
                         svg {

@@ -1,18 +1,8 @@
 ---
-title: "Posts"
-date: 2022-10-26
-draft: false
+title: Posts
+aside: "Posts about my work and personal projects. Some are associated with a larger project, others are one-offs."
 menu: "main"
-weight: 3
+weight: 2
 hideDate: true
-aliases:
-    - /log-book/
-
-description: "An archive of updates to my larger projects"
-aside: "
-Posts serve as updates to some of my larger projects.
-{{< tag-filters dateRange=\"true\" >}}"
+listType: stack
 ---
-
-{{< list "Projects" >}}
-<!-- There's a special carve-out for this page in the list def -->

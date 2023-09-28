@@ -42,27 +42,17 @@
 }
 
 @mixin header-font {
-  $header-font: "HoudiniTrio", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  $header-font: "HoudiniPixel", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: $header-font;
   font-weight: normal !important;
   text-transform: lowercase;
 }
 
 * {
+  // Change how underlines look
   text-decoration-thickness: 0.07em !important;
   text-underline-offset: 0.08em !important;
 }
-
-// main>p,
-// main>li,
-// main>h1,
-// main>h2,
-// main>h3,
-// main>h4,
-// main>h5 {
-//     margin-left: 2rem;
-//     margin-right: 2rem;
-// }
 
 p,
 li {
@@ -88,13 +78,11 @@ h3 {
 
 a {
   color: unset;
-  // transition: color $animation-fast;
 
   svg {
     stroke-width: 0;
-    stroke: $c0 !important;
-    fill: $c0 !important;
-    // transition: fill $animation-fast, stroke $animation-fast
+    stroke: $c1 !important;
+    fill: $c1 !important;
   }
 
   &:has(span.icon) {
@@ -170,6 +158,14 @@ a.link-button {
   &.icon-thick {
     svg {
       stroke-width: 0.04em;
+    }
+  }
+
+  &.icon-small {
+    svg {
+      width: 0.82em;
+      height: 0.82em;
+      margin-bottom: -0.15em;
     }
   }
 }

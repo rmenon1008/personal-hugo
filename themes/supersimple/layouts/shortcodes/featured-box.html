@@ -1,0 +1,40 @@
+{{ $page := .}}
+<div class="list-grid" style="margin-bottom: 2rem;">
+    {{ range split (.Get "projects") "," }}
+    {{ $p := $.Page.GetPage . }}
+    <div class="lgi">
+        <a href="{{$p.RelPermalink}}" class="lgi-link">
+            {{ if $p.Params.image -}}
+            <div class="lgi-img">
+                <img class="batch-load" src="{{ $p.Params.image }}" alt="{{$p.Title}}">
+            </div>
+            {{- end }}
+            <div class="lgi-text">
+                <h2 class="lgi-title">{{ $p.Title }}</h2>
+                {{ if $p.Params.description }}
+                <div class="lgi-desc">{{ $p.Params.description }}</div>
+                {{ end }}
+            </div>
+        </a>
+    </div>
+    {{ end }}
+</div>
+<div class="list-stack">
+    {{ range split (.Get "posts") "," }}
+    {{ $p := $.Page.GetPage . }}
+    <div class="lsi">
+        <a href="{{$p.RelPermalink}}" class="lsi-link unstyled" data-title="{{$p.Title}}">
+            <div class="lsi-text">
+                <h2 class="lsi-title">{{ $p.Title }}</h2>
+                <time class="lsi-date">{{$p.Date.Format "Jan 2, 2006"}}</time>
+            </div>
+            {{ if $p.Params.image }}
+            <div class="lsi-img">
+                <img class="batch-load" src="{{$p.Params.image}}" alt="{{$p.Title}}">
+            </div>
+            {{ end }}
+        </a>
+    </div>
+    {{ end }}
+</div>
+{{ partial "scripts/batch-loader" . }}

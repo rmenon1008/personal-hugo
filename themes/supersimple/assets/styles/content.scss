@@ -8,7 +8,7 @@
     margin-left: auto;
     margin-right: auto;
     aside {
-        width: 36%;
+        width: 32%;
         color: $c0;
         margin-bottom: 3rem;
 
@@ -17,23 +17,26 @@
         }
 
         p {
-            color: $c0;
+            color: $c1;
             font-size: 1.1rem;
             line-height: 1.35;
         }
     }
     main {
-        width: 64%;
+        width: 68%;
 
         > *:first-child {
+            // Remove margin-top from top element
             margin-top: 0;
         }
 
         &.wide {
+            // A page that takes up the full width
             width: 100%;
         }
 
         &.center {
+            // A narrow page that is centered
             width: max-content;
         }
     }

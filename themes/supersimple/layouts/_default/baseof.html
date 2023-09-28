@@ -5,7 +5,7 @@
 
 <body {{with .File }}data-hugo-markdown="{{ .Path }}"{{ end }}>
     <div class="content">
-        {{- partial "header.html" .}}
+        {{- partial "header.html" . -}}
         
         <div class="post" id="main">
             {{ $aside := partial "aside.html" .}}

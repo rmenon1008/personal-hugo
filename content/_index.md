@@ -22,6 +22,7 @@ links: [
 ]
 weight: 1
 ---
-<!-- ## Featured projects -->
-### Recent projects
-{{< list "/projects/aquametric/,/projects/wisp/,/projects/mockupgen/" true >}}
+{{< featured-box
+    projects="/projects/lunar-rover-networking, /projects/wisp"
+    posts="/posts/wisp-desktop, /posts/wisp-version-6, /posts/slim-airtag"
+>}}

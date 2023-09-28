@@ -35,7 +35,7 @@
             <a href="#" class="footer-label back-to-top">
                 Back to top
                 <span class="footer-arrow">
-                    {{ partial "icon-thick" "arrow_up" }}
+                    {{ partial "icon-small" "arrow_up_pixel" }}
                 </span>
             </a>
             <div class="footer-year">
@@ -44,36 +44,3 @@
         </div>
     </div>
 </footer>
-<div class="cursor-container">
-    <div class="cursor"></div>
-</div>
-<!-- <script>
-    cursorElement = document.querySelector(".cursor");
-    if (cursorElement) {
-        document.body.classList.add("cursor-enabled");
-        document.addEventListener("mousemove", e => {
-            cursorElement.style.top = e.clientY + "px";
-            cursorElement.style.left = e.clientX + "px";
-        });
-    }
-
-    hoverElements = document.querySelectorAll("a, button");
-    if (hoverElements) {
-        hoverElements.forEach(element => {
-            const rect = element.getBoundingClientRect();
-            const dotSize = rect.height * 0.25 + 30;
-            console.log(rect);
-            element.addEventListener("mouseenter", e => {
-                cursorElement.classList.add("hover");
-                cursorElement.style.width = dotSize + "px";
-                cursorElement.style.height = dotSize + "px";
-            });
-            element.addEventListener("mouseleave", e => {
-                cursorElement.classList.remove("hover");
-                cursorElement.style.width = "";
-                cursorElement.style.height = "";
-            });
-        });
-    }
-
-</script> -->

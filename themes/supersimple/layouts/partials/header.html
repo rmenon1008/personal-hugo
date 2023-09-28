@@ -2,7 +2,7 @@
   {{ $currentPage := . }}
   <div class="header{{ if .Params.hideDate }} no-date{{ end }}">
     <div class="path-title">
-      <div class="path">
+      {{/*  <div class="path">
         {{ $path := split .RelPermalink "/" }} {{ range seq (sub (len $path) 2)
         -}} {{ $item := index $path (sub . 1) }} {{ $path := delimit ($path |
         first .) "/" }} {{ if ne (trim $item " ") "" -}}
@@ -13,21 +13,21 @@
         {{ end }}
         <span class="separator">/</span>
         {{- end }} {{- end }}
-      </div>
+      </div>  */}}
       <div class="title slide-up">
         {{ $title := .Title }}
 
         {{/*  Carve out for 404 page  */}}
         {{/*  Wish I could do it better  */}}
         {{ if eq .Kind "404" -}}
-        {{ $title = "Page not found" }} 
+        {{ $title = "Page not found  [404]" }} 
         {{- end }}
 
         {{/* Here for accessibility, but is hidden */}}
         <h1>{{ $title }}</h1>
 
         {{/* Individual letters are separated */}}
-        <div class="letters" arial-hidden="true">
+        <div class="letters" aria-hidden="true">
           {{ $letters := len $title }} {{ $i := 0.0 }} {{ range split $title " "
           -}}
           <span class="word">

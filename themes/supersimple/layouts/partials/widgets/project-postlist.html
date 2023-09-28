@@ -1,3 +1,6 @@
+{{ $pages := where .Site.Pages "Params.project" .Title }}
+
+{{ if gt (len $pages) 0 }}
 <div class="project-postlist">
     <div class="postlist-label">
         <div class="widget-label">
@@ -5,18 +8,17 @@
             {{ .Title }} posts
         </div>
     </div>
-    {{ range .Site.Pages }}
-    {{ if and (eq .CurrentSection $.Page) (not .IsSection) }}
+    {{ range $pages }}
     <a href="{{.RelPermalink}}" class="postlist-item unstyled" data-title="{{.Title}}" style="--bg-color: {{.Params.color}}">
         {{ if .Params.image }}
         <img src="{{.Params.image}}" alt="{{.Title}}">
         {{ end }}
         <div class="postlist-item-text">
+            <div class="postlist-title">{{ .Title }}</div>
             <time class="postlist-item-date" datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "Jan 2, 2006"
                 }}</time>
-            <div class="postlist-title">{{ .Title }}</div>
         </div>
     </a>
     {{ end }}
-    {{ end }}
 </div>
+{{ end }}

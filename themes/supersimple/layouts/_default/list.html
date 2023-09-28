@@ -1,7 +1,10 @@
+
 {{ define "main" -}}
-{{/*  {{ if eq .Title "Posts" }}
-{{ partial "post-page.html" . }}
-{{ else }}  */}}
-{{ .Content }}
-{{/*  {{ end }}  */}}
-{{- end }}
+
+{{ if eq (.Param "listType") "grid" }}
+{{- partial  "list-grid.html" . -}}
+{{ else }}
+{{- partial "list-stack.html" . -}}
+{{ end }}
+
+{{ end }}

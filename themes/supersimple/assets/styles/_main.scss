@@ -3,13 +3,17 @@
 @import "./header.scss";
 @import "./footer.scss";
 @import "./content.scss";
+
 @import "./widgets.scss";
 @import "./shortcodes.scss";
-@import "./cursor.scss";
+
+@import "./list-grid.scss";
+// @import "./list-masonry.scss";
+@import "./list-stack.scss";
 @import "./pagination.scss";
+
 @import "./resume.scss";
 @import "./connect-card.scss";
-@import "./print.scss";
 
 body {
     margin: 0;
