@@ -13,7 +13,7 @@ aside: "This project is a collaboration between the [UW Sensor Systems Lab](http
 I became involved in the winter of 2022, building a simulated environnement for developing routing algorithms that consider the physical movement of network agents and their radios.
 
 
-We [presented our work](https://ieee-ccaa.com/wp-content/uploads/2023/06/26.pdf) at IEEE CCAAW 2023 in June, 2023.
+We [presented our work](https://ieeexplore.ieee.org/abstract/document/10219232) at IEEE CCAAW 2023 in June, 2023.
 "
 links: [
     {name: "DTN Simulator", url: "https://github.com/rmenon1008/dcgr_simulation", icon: "github" },
@@ -27,7 +27,7 @@ Instead, we imagine a distributed graph of network agents, running on a variety 
 
 Importantly, these agents will intelligently work to optimize the network. We're exploring how agents can make physical movement and data routing decisions to better facilitate the transfer of data within the network.
 
-We published a [workshop paper](https://ieee-ccaa.com/wp-content/uploads/2023/06/26.pdf) about a novel routing algorithm that considers the physical movement of network agents and their radios. To this end, we build an agent-based model that simulates many agents on the lunar surface.
+We published a [workshop paper](https://ieeexplore.ieee.org/abstract/document/10219232) about a novel routing algorithm that considers the physical movement of network agents and their radios. To this end, we build an agent-based model that simulates many agents on the lunar surface.
 
 {{< fig src="/media/dcgr.png" alt="DCGR Simulator" caption="Simulator for the development of RDTN" >}}
 

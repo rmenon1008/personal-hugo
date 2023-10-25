@@ -14,7 +14,7 @@ WISP was first developed by Intel Labs Seattle in 2006. It is now developed and 
 Version 6.0 of the platform focuses on making development easier with a new modular hardware design and a companion desktop application.
 
 
-We published a [workshop paper on WISP 6.0](https://dl.acm.org/doi/pdf/10.1145/3560905.3568109), which I presented at ACM LP-IoT in October, 2022.
+We published a [workshop paper on WISP 6.0](https://dl.acm.org/doi/pdf/10.1145/3560905.3568109), which I presented at ACM EnsSys in October, 2022.
 <br>
 <br>
 "
