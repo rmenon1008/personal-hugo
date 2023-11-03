@@ -2,6 +2,7 @@
 title: "WISP"
 date: 2023-01-12
 draft: false
+aliases: ['/s/wisp']
 
 project-tags: ["electronics", "academic", "software"]
 description: "A hardware platform and desktop app for RFID-based sensors"

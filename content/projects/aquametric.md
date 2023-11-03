@@ -4,15 +4,16 @@ date: 2021-11-26
 draft: false
 
 project-tags: [academic, electronics, software]
-description: "Low cost and distrubuted stream and river monitoring"
+description: "Low cost and distributed stream and river monitoring"
 
 aliases: [
     "/projects/aquametric/",
     "/research/aquametric/",
+    "/s/aquametric",
 ]
 hideDate: true
 image: "/media/aquametric.webp"
-aside: "This project was developed in collaboration with Ian Vernooy. It received a Hackaday Bootstrap Award and was a Finalist for the 2020 Hackaday Prize."
+aside: "This project was developed in collaboration with Lillian Vernooy. It received a Hackaday Bootstrap Award and was a Finalist for the 2020 Hackaday Prize."
 links: [
     {name: "Github repository", url: "https://github.com/ver09934/aquametric", icon: github},
     {name: "Hackaday project updates", url: "https://hackaday.io/project/170881", icon: hackaday},

@@ -9,6 +9,7 @@ hideDate: true
 aliases: [
     "/projects/resonant/",
     "/research/resonant/",
+    "/s/resonant"
 ]
 
 image: "/media/resonant.webp"

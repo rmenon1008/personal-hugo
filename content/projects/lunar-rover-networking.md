@@ -2,6 +2,7 @@
 title: "Lunar Rover Networking"
 date: 2023-03-31
 draft: false
+aliases: ['/s/dcgr']
 
 project-tags: ["electronics", "software"]
 description: "Connectivity-aware routing and mission planning for the moon"
