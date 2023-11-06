@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = 'Rohan Menon'
 theme = 'supersimple'
 
+[params]
+  description = 'I’m an undergraduate student at the University of Washington studying electrical engineering. I love working on projects involving electronics, software and design.'
+  images = ['media/cover.png']
+  title = 'Rohan Menon'
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
