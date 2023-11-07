@@ -38,4 +38,5 @@
     {{ $styles := resources.Get "styles/_main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
 </head>
