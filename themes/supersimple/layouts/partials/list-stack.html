@@ -14,7 +14,7 @@
                     {{ end }}
                 </span>  */}}
             </div>
-            {{ if (index .Params.images 0) }}
+            {{ if and .Params.images (index .Params.images 0) }}
             <div class="lsi-img">
                 <img class="batch-load" src="{{(index .Params.images 0)}}" alt="{{.Title}}">
             </div>
