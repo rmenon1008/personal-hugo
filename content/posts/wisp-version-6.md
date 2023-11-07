@@ -4,7 +4,7 @@ date: 2022-10-26
 
 project: "WISP"
 tags: ["electronics", "software"]
-image: "/media/wisp-iso.png"
+images: ["/media/wisp-iso.png"]
 aside: "This hardware version focused on making the sensing platform more modular. RF functionality is handled by a common board and optional mount-on boards add additional sensors."
 links: [
     {name: "Hardware files", url: "https://github.com/wisp/wisp6-hardware", icon: github},

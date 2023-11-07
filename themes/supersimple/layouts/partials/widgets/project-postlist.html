@@ -10,8 +10,8 @@
     </div>
     {{ range $pages }}
     <a href="{{.RelPermalink}}" class="postlist-item unstyled" data-title="{{.Title}}" style="--bg-color: {{.Params.color}}">
-        {{ if .Params.image }}
-        <img src="{{.Params.image}}" alt="{{.Title}}">
+        {{ if (index .Params.images 0) }}
+        <img src="{{(index .Params.images 0)}}" alt="{{.Title}}">
         {{ end }}
         <div class="postlist-item-text">
             <div class="postlist-title">{{ .Title }}</div>

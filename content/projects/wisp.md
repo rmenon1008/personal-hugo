@@ -7,7 +7,7 @@ aliases: ['/s/wisp']
 project-tags: ["electronics", "academic", "software"]
 description: "A hardware platform and desktop app for RFID-based sensors"
 hideDate: true
-image: "/media/wisp.webp"
+images: ["/media/wisp.webp"]
 aside: "
 WISP was first developed by Intel Labs Seattle in 2006. It is now developed and maintained by the [UW Sensor Systems Lab](https://sensor.cs.washington.edu/).
 

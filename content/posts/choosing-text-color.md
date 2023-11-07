@@ -5,7 +5,7 @@ draft: false
 
 project: "Temperate"
 tags: ["software", "design"]
-image: /media/ctc-1.webp
+images: ["/media/ctc-1.webp"]
 ---
 
 {{< fig src="/media/ctc-1.webp" alt="Red image with temperature displayed over it in pink (readable)" >}}

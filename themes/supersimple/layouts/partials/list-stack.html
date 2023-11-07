@@ -14,9 +14,9 @@
                     {{ end }}
                 </span>  */}}
             </div>
-            {{ if .Params.image }}
+            {{ if (index .Params.images 0) }}
             <div class="lsi-img">
-                <img class="batch-load" src="{{.Params.image}}" alt="{{.Title}}">
+                <img class="batch-load" src="{{(index .Params.images 0)}}" alt="{{.Title}}">
             </div>
             {{ end }}
         </a>

@@ -5,7 +5,7 @@ draft: false
 
 project: "Aquametric"
 tags: ["electronics", "software"]
-image: "/media/sensor_v2.webp"
+images: ["/media/sensor_v2.webp"]
 
 aside: "**Heads up:** this post serves mostly as an archive of the development of Aquametric. It's not a cohesive blog post."
 

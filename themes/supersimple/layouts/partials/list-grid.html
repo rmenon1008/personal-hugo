@@ -4,9 +4,9 @@
     {{ range .Paginator.Pages -}}
     <div class="lgi">
         <a href="{{.RelPermalink}}" class="lgi-link">
-            {{ if .Params.image -}}
+            {{ if (index .Params.images 0) -}}
             <div class="lgi-img">
-                <img class="batch-load" src="{{ .Params.image }}" alt="{{.Title}}">
+                <img class="batch-load" src="{{ (index .Params.images 0) }}" alt="{{.Title}}">
             </div>
             {{- end }}
             <div class="lgi-text">

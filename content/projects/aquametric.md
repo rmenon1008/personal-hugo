@@ -12,7 +12,7 @@ aliases: [
     "/s/aquametric",
 ]
 hideDate: true
-image: "/media/aquametric.webp"
+images: ["/media/aquametric.webp"]
 aside: "This project was developed in collaboration with Lillian Vernooy. It received a Hackaday Bootstrap Award and was a Finalist for the 2020 Hackaday Prize."
 links: [
     {name: "Github repository", url: "https://github.com/ver09934/aquametric", icon: github},

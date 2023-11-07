@@ -5,8 +5,7 @@ draft: false
 project-tags: ["software", "design" ]
 hideDate: true
 description: "My personal website to blog and showcase projects"
-image: "/media/web_portfolio.png"
-# aside: ""
+images: ["/media/web_portfolio.png"]
 links: [
     {name: "Theme and content", url: "https://github.com/rmenon1008/personal-hugo", icon: "github"},
 ]

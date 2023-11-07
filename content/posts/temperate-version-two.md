@@ -4,7 +4,7 @@ date: 2022-10-02
 draft: false
 
 project: "Temperate"
-image: "/media/temperate_v2.webp"
+images: ["/media/temperate_v2.webp"]
 ---
 
 {{< fig src = "/media/temperate_v2.webp" alt = "Temperate extension screenshot with frosted glass overlays" >}}

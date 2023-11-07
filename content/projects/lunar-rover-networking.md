@@ -7,7 +7,7 @@ aliases: ['/s/dcgr']
 project-tags: ["electronics", "software"]
 description: "Connectivity-aware routing and mission planning for the moon"
 hideDate: true
-image: "/media/dcgr_thumb.png"
+images: ["/media/dcgr_thumb.png"]
 aside: "This project is a collaboration between the [UW Sensor Systems Lab](https://sensor.cs.washington.edu/) and [Astrobotic](https://www.astrobotic.com/), funded by a NASA ESI grant.
 
 

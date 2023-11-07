@@ -6,7 +6,7 @@ draft: false
 alias: loading-images-in-a-grid
 
 project: "Web Portfolio"
-image: "/media/grid_thumb.png"
+images: ["/media/grid_thumb.png"]
 tags: ["software", "design"]
 ---
 

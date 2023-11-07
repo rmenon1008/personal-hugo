@@ -6,7 +6,7 @@ draft: false
 project-tags: ["design", "software"]
 description: "A Python-based CLI that generates a device mockup from a screenshot"
 hideDate: true
-image: "/media/mockupception.png"
+images: ["/media/mockupception.png"]
 aside: "Install with `pip install mockupgen`
 
 

@@ -5,7 +5,7 @@ draft: false
 
 description: "Bringing STEAM lessons to students with a retrofitted school bus"
 tags: ["volunteer", "software"]
-image: "/media/nysteambus.jfif"
+images: ["/media/nysteambus.jfif"]
 aside: "Though I left for school in 2021, the program is still running! Check out the website for more."
 links: [
     {name: "NY STEAM Bus website", url: "https://nysteamb.us/"},

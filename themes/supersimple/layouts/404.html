@@ -6,7 +6,7 @@
     {
       title: "{{ .Title }}",
       link: "{{ .RelPermalink }}",
-      image: "{{ .Params.image }}",
+      image: "{{ (index .Params.images 0) }}",
       date: "{{ .Date.Format "Jan 2, 2006" }}",
     },
     {{- end }}

@@ -4,7 +4,7 @@ date: 2022-10-13
 draft: false
 
 tags: ["design"]
-image: "/media/houdini.jpg"
+images: ["/media/houdini.jpg"]
 aside: "These fonts were mostly made for fun, so they have extremely limited character sets and are pretty incomplete. Keep that in mind if you download them."
 ---
 {{< fig src="/media/houdini.jpg" alt="Houdini Trio font" >}}

@@ -4,7 +4,7 @@ date: {{ .Date }}
 draft: true
 
 description: ""
-image: "/media/{{ .Name }}.png"
+images: ["/media/{{ .Name }}.png"]
 aside: ""
 links: [
     {name: "", url: ""},

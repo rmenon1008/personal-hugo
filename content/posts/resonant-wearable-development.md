@@ -5,7 +5,7 @@ draft: false
 
 project: "Resonant"
 tags: ["electronics", "software"]
-image: "/media/resonant_2.webp"
+images: ["/media/resonant_2.webp"]
 ---
 
 {{< fig src="/media/resonant_2.webp" alt="Resonant wearable heads up display" >}}

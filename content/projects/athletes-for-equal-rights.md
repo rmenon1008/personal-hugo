@@ -4,7 +4,7 @@ date: 2019-07-12
 draft: false
 hideDate: true
 description: "An interactive scrolling timeline and blog"
-image: "/media/afer.webp"
+images: ["/media/afer.webp"]
 aside: "The site is no longer live, but an archived version still exists to explore the interactive timeline."
 links: [
     {name: "Archived site", url: "http://web.archive.org/web/20211211081944/https://www.athletesforequalrights.com/"},

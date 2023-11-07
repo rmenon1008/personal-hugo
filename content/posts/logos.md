@@ -4,7 +4,7 @@ date: 2019-09-21
 draft: false
 
 tags: ["design"]
-image: "/media/logos.webp"
+images: ["/media/logos.webp"]
 aside: "These were created for friends and personal projects."
 ---
 

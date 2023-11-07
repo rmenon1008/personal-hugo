@@ -5,7 +5,7 @@ date: 2022-12-15
 draft: false
 
 project: "WISP"
-image: "/media/wisp_app_gui_mockup.png"
+images: ["/media/wisp_app_gui_mockup.png"]
 aside: "A cross-platform app to interface with [LLRP](http://llrp.org/) RFID readers to display data from WISP tags."
 links: [
     {name: "WISP desktop", url: "https://github.com/wisp/wisp-desktop", icon: github},

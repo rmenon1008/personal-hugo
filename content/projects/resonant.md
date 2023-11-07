@@ -12,7 +12,7 @@ aliases: [
     "/s/resonant"
 ]
 
-image: "/media/resonant.webp"
+images: ["/media/resonant.webp"]
 aside: "This project was developed in collaboration with Kalin Kochnev and Jacob Yanoff for the 2021 Senior Division GCRSEF. It received Highest Honors in the NY State STANYS science and engineering fair"
 links: [
     {name: "Github repository", url: "https://github.com/kalinkochnev/resonant", icon: github},
