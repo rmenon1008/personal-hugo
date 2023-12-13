@@ -1,0 +1,36 @@
+{{ $optBlock := dict "display" "block" }}
+{{ $p := .Page }}
+<div class="bento">
+  {{ $r := (.Inner | transform.Unmarshal) }}
+  {{ range $r.bento -}}
+  {{ $row := .row | default "auto" }}
+  {{ $col := .col | default "auto" }}
+  {{ $fav := .fav | default false }}
+  {{ $unsafe_css := print "grid-row: " $row "; " "grid-column: " $col ";"}}
+  <div class="ben-item {{ if $fav }}favorite{{ end }}" style="{{ $unsafe_css | safeCSS }}">
+    {{ if .link -}}
+    <a class="ben-item-link unstyled" href="{{ .link }}">
+      {{- else -}}
+      <div class="ben-item-head">
+        {{- end }}
+
+        {{ if .title -}}
+        <h3>
+          {{ .title | $p.RenderString }}
+          {{ if .link -}}
+          {{- partial "icon-thick" "arrow_up_right" -}}
+          {{- end }}
+        </h3>
+        {{- end }}
+        
+        {{ with .date -}}
+        <span class="ben-dates">{{- . -}}</span>
+        {{- end }}
+        
+        {{ if .link -}}
+    </a>
+    {{- else -}}
+  </div>
+  {{- end }}
+</div>
+{{ end }}

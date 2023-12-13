@@ -1,21 +1,22 @@
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 <div class="connect-card">
-    {{ partial "svg/pfp.svg" }}
-    <div class="cc-details">
-      <h3>Rohan Menon</h3>
-      <b>rohan@rohanmenon.com</b>
-      <p>
-        An engineering student with a focus on embedded devices, sensors, and
-        wireless technologies who thrives in fast-paced, collaborative
-        environments.
-      </p>
-      <a class="link-button" href="/media/resume-11-23.pdf" style="margin-right: 0.3rem;">
-        {{ partial "icon" "pdf" }}
-        <span>PDF Resume</span>
-      </a>
-      <a class="link-button" href="https://www.linkedin.com/in/rohan-menon-46518415a/">
-        {{ partial "icon" "linkedin" }}
-        <span>LinkedIn</span>
-      </a>
-    </div>
+  {{ partial "svg/pfp.svg" }}
+  <div class="cc-details">
+    <h3>Rohan Menon</h3>
+    <b>rohan@rohanmenon.com</b>
+    <p>
+      An engineering student with a focus on embedded devices, sensors, and
+      wireless technologies who thrives in fast-paced, collaborative
+      environments.
+    </p>
+    <a class="link-button" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/rohansmenon/lets-talk?hide_event_type_details=1'});return false;">
+      {{ partial "icon" "video" }}
+      <span>Schedule a chat</span>
+    </a>
+    <a class="link-button" href="/media/resume-11-23.pdf" style="margin-right: 0.3rem;">
+      {{ partial "icon" "pdf" }}
+      <span>Resume</span>
+    </a>
   </div>
-  
+</div>

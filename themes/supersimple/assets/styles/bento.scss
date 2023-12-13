@@ -1,0 +1,16 @@
+.bento {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 15px;
+
+    .ben-item {
+        display: block;
+        background-color: $c9;
+        border-radius: $border-big;
+
+        &.favorite {
+            background-color: $p05;
+        }
+    }
+}
