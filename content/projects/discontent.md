@@ -6,7 +6,7 @@ draft: false
 project-tags: ["electronics", "software"]
 description: "A low-res, live feed from practically unseen YouTube videos."
 hideDate: true
-images: ["/media/discontent.jpg"]
+images: ["/media/discontent.webp"]
 aside: "This piece sits in my living room, displaying a continuous stream of videos that have close to zero views.
 
 
