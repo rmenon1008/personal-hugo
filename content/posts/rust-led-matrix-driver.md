@@ -3,6 +3,7 @@ title: A HUB75 LED Matrix Driver, in Rust
 date: 2023-10-12
 draft: false
 
+project: "dis/content"
 images: ["/media/led_matrix.png"]
 tags: ["software", "electronics"]
 ---

@@ -25,5 +25,5 @@ weight: 1
 ---
 {{< featured-box
     projects="/projects/lunar-rover-networking, /projects/wisp"
-    posts="/posts/rust-led-matrix-driver, /posts/wisp-desktop, /posts/slim-airtag"
+    posts="/projects/discontent, /posts/wisp-desktop, /posts/wisp-version-6"
 >}}

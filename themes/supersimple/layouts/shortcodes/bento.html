@@ -8,26 +8,17 @@
   {{ $fav := .fav | default false }}
   {{ $unsafe_css := print "grid-row: " $row "; " "grid-column: " $col ";"}}
   <div class="ben-item {{ if $fav }}favorite{{ end }}" style="{{ $unsafe_css | safeCSS }}">
-    {{ if .link -}}
-    <a class="ben-item-link unstyled" href="{{ .link }}">
+    {{ if .url -}}
+    <a class="ben-item-inner ben-item-link unstyled" href="{{ .url }}">
       {{- else -}}
-      <div class="ben-item-head">
+      <div class="ben-item-inner">
         {{- end }}
 
-        {{ if .title -}}
-        <h3>
-          {{ .title | $p.RenderString }}
-          {{ if .link -}}
-          {{- partial "icon-thick" "arrow_up_right" -}}
-          {{- end }}
-        </h3>
+        {{ with .content -}}
+          {{ . | $p.RenderString $optBlock }}
         {{- end }}
-        
-        {{ with .date -}}
-        <span class="ben-dates">{{- . -}}</span>
-        {{- end }}
-        
-        {{ if .link -}}
+
+        {{ if .url -}}
     </a>
     {{- else -}}
   </div>

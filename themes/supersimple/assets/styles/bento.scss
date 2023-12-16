@@ -8,9 +8,31 @@
         display: block;
         background-color: $c9;
         border-radius: $border-big;
+        overflow: hidden;
+
+        .ben-item-inner {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            container-name: bento-item;
+            container-type: inline-size;
+        }
 
         &.favorite {
             background-color: $p05;
         }
+    }
+}
+
+.post-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+@container bento-item (max-width: 300px) {
+    .post-box {
+        background-color: blue;
     }
 }
