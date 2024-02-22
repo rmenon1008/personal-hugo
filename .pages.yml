@@ -1,3 +1,15 @@
 media:
   input: static/media
   output: /media
+
+content:
+  - name: posts
+    label: Posts
+    path: content/posts
+    type: collection
+    fields:
+      - name: images
+        label: images
+        type: image
+        list: true
+        
