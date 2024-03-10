@@ -15,7 +15,7 @@ header {
         padding-bottom: 0.75em;
         border-bottom: 2px solid $c0;
         display: flex;
-        gap: 2rem;
+        // gap: 4rem;
 
         .path-title {
             .title {
@@ -51,7 +51,7 @@ header {
                         --font-size: 4rem;
                         max-width: 100%;
                         font-size: 0;
-                        margin-right: calc(-1 * var(--font-size) * 0.318);
+                        // margin-right: calc(-1 * var(--font-size) * 0.318);
                         pointer-events: none;
                         user-select: none;
                         // overflow: hidden;
@@ -112,13 +112,25 @@ header {
                     @include nav-hover;
                 }
             }
+        }
 
-            flex: 1;
+        .inbetween-title-box {
+            flex-grow: 1;
+            min-width: 4rem;
+            margin-right: 1.5rem;
+
+            canvas {
+                position: absolute;
+                image-rendering: pixelated;
+                transform-origin: top left;
+                transform: scale(4);
+            }
         }
 
         .nav-date {
             text-align: right;
             position: relative;
+            background-color: $bg;
 
             ul {
                 display: flex;
@@ -167,11 +179,11 @@ header {
 
         .header {
             flex-direction: column-reverse;
-            gap: 1.5rem;
+            gap: 0.5rem;
             position: relative;
 
             .path-title {
-                height: 3.75rem;
+                // height: 3.75rem;
 
                 .path {
                     min-height: unset;
@@ -217,7 +229,7 @@ header {
 @media screen and (max-width: 500px) {
     header .header {
         .path-title {
-            height: 3.25rem;
+            // height: 3.25rem;
 
             .path {
                 font-size: 1.1rem;

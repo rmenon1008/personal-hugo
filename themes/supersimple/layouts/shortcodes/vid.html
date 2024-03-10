@@ -16,6 +16,19 @@
     document.getElementById('video{{$id}}').addEventListener('timeupdate', function() {
         document.getElementById('progress{{$id}}').value = (100 / document.getElementById('video{{$id}}').duration) * document.getElementById('video{{$id}}').currentTime;
     });
+    document.getElementById('progress{{$id}}').addEventListener('click', function(e) {
+        const box = this.getBoundingClientRect();
+        const pos = (e.pageX - box.left) / box.width;
+        document.getElementById('video{{$id}}').currentTime = pos * document.getElementById('video{{$id}}').duration;
+    });
+    console.log(document.getElementById('video{{$id}}').duration);
+    document.getElementById('video{{$id}}').addEventListener('click', function() {
+        if (this.paused) {
+            this.play();
+        } else {
+            this.pause();
+        }
+    });
 </script>
 {{ end }}
 

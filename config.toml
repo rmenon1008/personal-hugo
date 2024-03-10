@@ -4,7 +4,7 @@ title = 'Rohan Menon'
 theme = 'supersimple'
 
 [params]
-  description = 'I’m an undergraduate student at the University of Washington studying electrical engineering. I love working on projects involving electronics, software and design.'
+  description = "I’m a researcher at the University of Washington's Sensor Systems Lab with Joshua R. Smith. I love working on projects involving electronics, software and design."
   images = ['media/cover.png']
   title = 'Rohan Menon'
 

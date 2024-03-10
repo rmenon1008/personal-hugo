@@ -2,18 +2,6 @@
   {{ $currentPage := . }}
   <div class="header{{ if .Params.hideDate }} no-date{{ end }}">
     <div class="path-title">
-      {{/*  <div class="path">
-        {{ $path := split .RelPermalink "/" }} {{ range seq (sub (len $path) 2)
-        -}} {{ $item := index $path (sub . 1) }} {{ $path := delimit ($path |
-        first .) "/" }} {{ if ne (trim $item " ") "" -}}
-        {{ if $currentPage.GetPage ($path | urlize) }}
-        <a href="{{ $path | urlize }}">{{ $item }}</a>
-        {{ else }}
-        <span class="separator">{{ $item }}</span>
-        {{ end }}
-        <span class="separator">/</span>
-        {{- end }} {{- end }}
-      </div>  */}}
       <div class="title slide-up">
         {{ $title := .Title }}
 
@@ -49,6 +37,27 @@
           }
         }
       </script>
+    </div>
+    <div class="inbetween-title-box" id="inbetween-title-box">
+      {{ if .Params.titleCat }}
+      <canvas id="inbetween-title-canvas">
+      </canvas>
+      <script>
+        const canvasContainer = document.getElementById("inbetween-title-box");
+        const canvas = document.getElementById("inbetween-title-canvas");
+
+        const resizeObserver = new ResizeObserver((entries) => {
+          for (let entry of entries) {
+            const { width, height } = entry.contentRect;
+            canvas.width = width / 4;
+            canvas.height = height / 4;
+          }
+        });
+        resizeObserver.observe(canvasContainer);
+      </script>
+      <script src='{{ "js/easel.min.js" | relURL }}'></script>
+      <script src='{{ "js/title-cat.js" | relURL }}'></script>
+      {{ end }}
     </div>
     <div class="nav-date">
       <nav>

@@ -1,6 +1,6 @@
 {{ $page := .}}
 <div class="list-grid" style="margin-bottom: 2rem;">
-    {{ range split (.Get "projects") "," }}
+    {{ range split (replaceRE "(\\s)" "" (.Get "projects")) "," }}
     {{ $p := $.Page.GetPage . }}
     <div class="lgi">
         <a href="{{$p.RelPermalink}}" class="lgi-link">
@@ -20,7 +20,7 @@
     {{ end }}
 </div>
 <div class="list-stack">
-    {{ range split (.Get "posts") "," }}
+    {{ range split (replaceRE "(\\s)" "" (.Get "posts")) "," }}
     {{ $p := $.Page.GetPage . }}
     <div class="lsi">
         <a href="{{$p.RelPermalink}}" class="lsi-link unstyled" data-title="{{$p.Title}}">

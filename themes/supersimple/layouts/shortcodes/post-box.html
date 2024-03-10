@@ -1,10 +1,11 @@
+{{ $p := $.Page.GetPage (.Get 0) }}
 <div class="post-box">
     <div class="post-box-inner">
-        <div class="post-box-title">
-        <h2>Test Title</h2>
+        <div class="post-box-image">
+            <img src="{{ (index $p.Params.images 0) }}" alt="{{ $p.Title }}">
         </div>
-        <div class="post-box-content">
-        <p>Test sdf</p>
+        <div class="post-box-text">
+            <h2>{{$p.Title}}</h2>
         </div>
     </div>
 </div>

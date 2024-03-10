@@ -7,9 +7,9 @@ menu: "main"
 aliases: ["/portfolio/"]
 
 hideDate: true
-description: "I’m an undergraduate student at the University of Washington studying electrical engineering. I love working on projects involving electronics, software and design."
+description: "I’m a researcher at the University of Washington's CS Department. I love working on projects involving electronics, software and design."
 
-aside: "I’m an undergraduate student at the University of Washington studying electrical engineering. I love working on projects involving electronics, software and design.
+aside: "I’m a researcher at the University of Washington's CS Department. I love working on projects involving electronics, software and design.
 
 
 Right now, I work on the [DCGR](/projects/lunar-rover-networking) and [WISP](/projects/wisp/) projects at the [UW Sensor Systems Lab](https://sensor.cs.washington.edu/).
@@ -22,6 +22,8 @@ links: [
     { name: "GitHub", url: "https://github.com/rmenon1008", icon: "github" },
 ]
 weight: 1
+
+titleCat: true
 ---
 {{< featured-box
     projects="/projects/lunar-rover-networking, /projects/wisp"
