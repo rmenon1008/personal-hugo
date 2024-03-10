@@ -48,7 +48,7 @@ setTimeout(() => {
     }
 
     function nuzzleExit() {
-        if (cat.currentAnimation === "nuzzle") {
+        if (cat.currentAnimation === "nuzzle" || cat.currentAnimation === "nuzzleEnter") {
             cat.gotoAndPlay("nuzzleExit");
         }
     }
