@@ -41,15 +41,30 @@ setTimeout(() => {
         stage.update(event);
     }
 
+    let start;
+    let end;
+
     function nuzzleEnter() {
         if (cat.currentAnimation === "sit") {
             cat.gotoAndPlay("nuzzleEnter");
+            start = new Date().getTime();
         }
     }
 
     function nuzzleExit() {
         if (cat.currentAnimation === "nuzzle" || cat.currentAnimation === "nuzzleEnter") {
             cat.gotoAndPlay("nuzzleExit");
+            end = new Date().getTime();
+            const petTime = end - start;
+
+            // Make a POST request to the server to update the pet time
+            fetch("https://pet-tracking.vercel.app/log_pet", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ duration_ms: petTime }),
+            });
         }
     }
 }, 100);
