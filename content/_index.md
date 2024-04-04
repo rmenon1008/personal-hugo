@@ -7,12 +7,12 @@ menu: "main"
 aliases: ["/portfolio/"]
 
 hideDate: true
-description: "I’m a researcher at the University of Washington's CS Department. I love working on projects involving electronics, software and design."
+description: "I’m an incoming PhD student to MIT EECS. I have a BS in Electrical Engineering from the University of Washington. I love working on projects involving electronics, software and design."
 
-aside: "I’m a researcher at the University of Washington's CS Department. I love working on projects involving electronics, software and design.
+aside: "I’m an incoming PhD student to MIT EECS. I have a BS in Electrical Engineering from the University of Washington.
 
 
-Right now, I work on the [DCGR](/projects/lunar-rover-networking) and [WISP](/projects/wisp/) projects at the [UW Sensor Systems Lab](https://sensor.cs.washington.edu/).
+I love working on projects involving electronics, software and design.
 <br>
 <br>
 "
