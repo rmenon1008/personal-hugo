@@ -17,7 +17,7 @@
     },
     {
       "source": "/wp-content/uploads/2022/08/Resume-Rohan-Menon-Website.pdf",
-      "destination": "/media/resume.pdf",
+      "destination": "/resume/",
       "permanent": true
     },
     {
