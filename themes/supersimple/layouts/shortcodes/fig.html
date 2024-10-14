@@ -1,4 +1,4 @@
-<figure 
+<figure
 {{ with .Get "class" }}
     class="{{ . }}"
 {{ end }}
@@ -9,12 +9,14 @@
     {{ $src := .Get "src" }}
     {{- if .Get "link" -}}
         <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+    {{- else -}}
+        <a href="{{ $src }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end -}}
     <img src="{{ $src }}"
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
          {{- end -}}
-         
+
          style='
          {{ if .Get "width" }}
             width: {{ .Get "width" }};
@@ -36,7 +38,7 @@
          {{- end -}}
          '
     /><!-- Closing img tag -->
-    {{- if .Get "link" }}</a>{{ end -}}
+    </a>
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
         <figcaption>
             {{ with (.Get "title") -}}
