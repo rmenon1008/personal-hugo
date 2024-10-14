@@ -7,9 +7,9 @@ menu: "main"
 aliases: ["/portfolio/"]
 
 hideDate: true
-description: "I’m an incoming PhD student to MIT EECS. I have a BS in Electrical Engineering from the University of Washington. I love working on projects involving electronics, software and design."
+description: "I’m a first year PhD student in [Signal Kinetics](https://www.media.mit.edu/groups/signal-kinetics/overview/) at the [MIT Media Lab](https://www.media.mit.edu/), focusing on wireless sensing and communication. I love working on projects involving electronics, software and design."
 
-aside: "I’m an incoming PhD student to MIT EECS. I have a BS in Electrical Engineering from the University of Washington.
+aside: "I’m a first year PhD student in [Signal Kinetics](https://www.media.mit.edu/groups/signal-kinetics/overview/) at the [MIT Media Lab](https://www.media.mit.edu/), focusing on wireless sensing and communication.
 
 
 I love working on projects involving electronics, software and design.
@@ -26,6 +26,6 @@ weight: 1
 titleCat: true
 ---
 {{< featured-box
-    projects="/projects/lunar-rover-networking, /projects/wisp"
-    posts="/projects/discontent, /posts/wisp-desktop, /posts/wisp-version-6"
+    projects="/projects/paint-plotter, /projects/discontent"
+    posts="/projects/lunar-rover-networking, /posts/wisp-desktop, /posts/wisp-version-6"
 >}}

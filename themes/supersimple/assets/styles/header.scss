@@ -17,6 +17,12 @@ header {
         display: flex;
         // gap: 4rem;
 
+        .title-cat-contain {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+        }
+
         .path-title {
             .title {
                 margin-top: -0.2rem;
@@ -182,6 +188,14 @@ header {
             gap: 0.5rem;
             position: relative;
 
+            .inbetween-title-box {
+                margin: 0;
+
+                canvas {
+                    transform: scale(3) translateY(3.33px);
+                }
+            }
+
             .path-title {
                 // height: 3.75rem;
 
@@ -228,6 +242,10 @@ header {
 
 @media screen and (max-width: 500px) {
     header .header {
+        .inbetween-title-box canvas {
+            transform: scale(2.5) translateY(3.75px);
+        }
+
         .path-title {
             // height: 3.25rem;
 

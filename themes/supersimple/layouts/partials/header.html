@@ -1,83 +1,101 @@
 <header>
-  {{ $currentPage := . }}
-  <div class="header{{ if .Params.hideDate }} no-date{{ end }}">
-    <div class="path-title">
-      <div class="title slide-up">
-        {{ $title := .Title }}
+    {{ $currentPage := . }}
+    <div class="header{{ if .Params.hideDate }} no-date{{ end }}">
+        <div class="title-cat-contain">
+            <div class="path-title">
+                <div class="title slide-up">
+                    {{ $title := .Title }} {{/* Carve out for 404 page */}} {{/*
+                    Wish I could do it better */}} {{ if eq .Kind "404" -}} {{
+                    $title = "Page not found [404]" }} {{- end }} {{/* Here for
+                    accessibility, but is hidden */}}
+                    <h1>{{ $title }}</h1>
 
-        {{/*  Carve out for 404 page  */}}
-        {{/*  Wish I could do it better  */}}
-        {{ if eq .Kind "404" -}}
-        {{ $title = "Page not found  [404]" }} 
-        {{- end }}
+                    {{/* Individual letters are separated */}}
+                    <div class="letters" aria-hidden="true">
+                        {{ $letters := len $title }} {{ $i := 0.0 }} {{ range
+                        split $title " " -}}
+                        <span class="word">
+                            {{ range split . "" -}}
+                            <span class="letter" style="--index: {{$i}};"
+                                >{{- . -}}</span
+                            >
+                            {{ $i = sub (add $i 1.0) (div $i 15) }} {{- end }}
+                        </span>
+                        {{- end }}
+                    </div>
+                </div>
+                <script>
+                    // Check if the previous page was the same as the current page
+                    // If so, then add the class "no-animate" to the title element
+                    if (document.referrer) {
+                        const referrer = document.referrer.split("?")[0];
+                        const current = window.location.href.split("?")[0];
+                        if (referrer === current) {
+                            document
+                                .querySelector(".title")
+                                .classList.add("no-animate");
+                        }
+                    }
+                </script>
+            </div>
+            <div class="inbetween-title-box" id="inbetween-title-box">
+                {{ if .Params.titleCat }}
+                <canvas id="inbetween-title-canvas"> </canvas>
+                <script>
+                    const canvasContainer = document.getElementById(
+                        "inbetween-title-box",
+                    );
+                    const canvas = document.getElementById(
+                        "inbetween-title-canvas",
+                    );
 
-        {{/* Here for accessibility, but is hidden */}}
-        <h1>{{ $title }}</h1>
+                    const resizeCanvas = ({ width, height }) => {
+                        let scale = 4;
+                        if (window.innerWidth < 800) {
+                            scale = 3;
+                        } else if (window.innerWidth < 500) {
+                            scale = 2.5;
+                        }
+                        canvas.width = width / scale;
+                        canvas.height = height / scale + 1;
+                    };
 
-        {{/* Individual letters are separated */}}
-        <div class="letters" aria-hidden="true">
-          {{ $letters := len $title }} {{ $i := 0.0 }} {{ range split $title " "
-          -}}
-          <span class="word">
-            {{ range split . "" -}}
-            <span class="letter" style="--index: {{$i}};">{{- . -}}</span>
-            {{ $i = sub (add $i 1.0) (div $i 15) }} {{- end }}
-          </span>
-          {{- end }}
+                    const resizeObserver = new ResizeObserver((entries) => {
+                        for (let entry of entries) {
+                            const { width, height } = entry.contentRect;
+                            resizeCanvas({ width, height });
+                        }
+                    });
+                    resizeObserver.observe(canvasContainer);
+
+                    const { width, height } =
+                        canvasContainer.getBoundingClientRect();
+                    resizeCanvas({ width, height });
+                </script>
+                <script src='{{ "js/easel.min.js" | relURL }}'></script>
+                <script src='{{ "js/title-cat.js" | relURL }}'></script>
+                {{ end }}
+            </div>
         </div>
-      </div>
-      <script>
-        // Check if the previous page was the same as the current page
-        // If so, then add the class "no-animate" to the title element
-        if (document.referrer) {
-          const referrer = document.referrer.split("?")[0];
-          const current = window.location.href.split("?")[0];
-          if (referrer === current) {
-            document.querySelector(".title").classList.add("no-animate");
-          }
-        }
-      </script>
+        <div class="nav-date">
+            <nav>
+                <ul>
+                    {{ range .Site.Menus.main }}
+                    <li
+                        class='{{ if ($currentPage.HasMenuCurrent "main" .) }}child{{ end }} {{ if ($currentPage.IsMenuCurrent "main" .) }}current{{ end }}'
+                    >
+                        <a href="{{ .URL }}">{{.Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </nav>
+            {{ if and (not .Params.hideDate) (ne .Kind "404") -}}
+            <time
+                datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'
+                class="post-date"
+                >Posted {{ .Date.Format "Jan 2, 2006" }}</time
+            >
+            {{- end }}
+        </div>
     </div>
-    <div class="inbetween-title-box" id="inbetween-title-box">
-      {{ if .Params.titleCat }}
-      <canvas id="inbetween-title-canvas">
-      </canvas>
-      <script>
-        const canvasContainer = document.getElementById("inbetween-title-box");
-        const canvas = document.getElementById("inbetween-title-canvas");
-
-        const resizeObserver = new ResizeObserver((entries) => {
-          for (let entry of entries) {
-            const { width, height } = entry.contentRect;
-            canvas.width = width / 4;
-            canvas.height = height / 4 + 1;
-          }
-        });
-        resizeObserver.observe(canvasContainer);
-      </script>
-      <script src='{{ "js/easel.min.js" | relURL }}'></script>
-      <script src='{{ "js/title-cat.js" | relURL }}'></script>
-      {{ end }}
-    </div>
-    <div class="nav-date">
-      <nav>
-        <ul>
-          {{ range .Site.Menus.main }}
-          <li
-            class='{{ if ($currentPage.HasMenuCurrent "main" .) }}child{{ end }} {{ if ($currentPage.IsMenuCurrent "main" .) }}current{{ end }}'
-          >
-            <a href="{{ .URL }}">{{.Name }}</a>
-          </li>
-          {{ end }}
-        </ul>
-      </nav>
-      {{ if and (not .Params.hideDate) (ne .Kind "404") -}}
-      <time
-        datetime='{{ .Date.Format "2006-01-02T15:04:05Z0700" }}'
-        class="post-date"
-        >Posted {{ .Date.Format "Jan 2, 2006" }}</time
-      >
-      {{- end }}
-    </div>
-  </div>
 </header>

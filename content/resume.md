@@ -19,26 +19,39 @@ resume:
           {{< connect-card >}}
   - section: Education
     items:
+      - title: Massachusetts Institute of Technology
+        date: Sep 2024 - Present
+        description: |
+          Ph.D. in Electrical Engineering and Computer Science
+
       - title: University of Washington
         date: Sep 2021 - Dec 2023
         description: |
           B.S. Electrical and Computer Engineering
 
-          Relevant coursework: *The Hardware/Software Interface* · *Computer
-          Networks* · *Computer Architecture* · *Network Security and Cryptography*
-          · *Digital Imaging Systems*
   - section: Experience
     items:
-      - title: Research Assistant · UW Sensor Systems Lab
+      - title: Graduate Researcher · [Signal Kinetics](https://www.media.mit.edu/groups/signal-kinetics/overview/) @ [MIT Media Lab](https://www.media.mit.edu/)
+        date: Sep 2024 - Present
+        description: |
+          - Working on batteryless underwater sensing using acoustic backscatter
+
+      - title: Embedded Hardware and Software Engineer · [WaveWorks](https://waveworks.tech/)
+        date: Mar 2024 - Aug 2024
+        description: |
+          - Developed a wireless protocol for custom ultra-low power modems to support a range of use cases
+          - Built software tools to automate aspects of FPGA testing
+          - Established a simulated RTL CI pipeline for FPGA and ASIC design
+
+      - title: Undergraduate Researcher · [UW Sensor Systems Lab](https://sensor.cs.washington.edu/)
         date: Feb 2022 - Mar 2024
         description: |
           *[WISP](https://www.rohanmenon.com/projects/wisp/)* - a family of
           batteryless sensors that are powered by and communicate entirely
           through UHF RFID power harvesting and backscatter.
-          - Developed hardware and embedded firmware for a new, modular,
-          generation of WISP devices.
-          - Designed and built a cross-platform desktop application to collect
-          and visualize data from WISP.
+          - Developed embedded firmware for version 6 of WISP
+          devices, and built a cross-platform desktop app to collect
+          and visualize its data.
           - [**R. Menon**, R. Gujarathi, A. Saffari, J. Smith, “Wireless
           Identification and Sensing Platform Version 6.0”, EnsSys
           2022](https://dl.acm.org/doi/pdf/10.1145/3560905.3568109)
@@ -48,47 +61,23 @@ resume:
           *[Deep Contact Graph Routing](/projects/lunar-rover-networking)* - a
           collaboration with Astrobotic, developing new networking strategies
           for future lunar assets.
-          - Built ray-tracing based, GPU-accelerated, simulator for modeling RF
-          propagation between agents.
-          - Created open-source framework for simulating networking between
-          mobile agents.
+          - Built a ray-tracing based, GPU-accelerated, simulator for modeling RF
+          propagation and networking between mobile agents.
           - [D. Ta, **R. Menon**, J. Taggart, A. Tettamanti, S. Feaser, P.
           Torrado, J. Smith, "Roaming DTN: Integrating Unscheduled Nodes into
           Contact Plan Based DTN Networks", to be presented at CCAA (June
           2023)](https://ieeexplore.ieee.org/abstract/document/10219232)
-  - section: Projects
-    items:
-      - title: Resonant
-        date: Nov 2020 - Jun 2021
-        link: /projects/resonant
-        description: |
-          A system to localize and identify ambient noises and present them to a
-          user through a wearable display.
-
-          - Developed a 3D sound localization algorithm using a microphone array
-          with phase shift estimation and created a heads-up display to
-          communicate this information to a user.
-      - title: Aquametric
-        date: Oct 2018 - Dec 2020
-        link: /projects/aquametric
-        description: |
-          Low power, cellular-based, stream and river monitoring devices. Won a
-          Hackaday Bootstrap Award and was a finalist for the Hackaday Prize
-          2020, an international competition for open-source electronics.
-
-          - Used power gating and aggressive sleep states to extend its battery life to one year in the field.
-          - Developed firmware enabling features like OTA updates and a variable sensor uplink cadence.
   - section: Skills
     items:
       - title: Hardware
         description: |
-          - Digital (incl. Verilog) and analog circuit design
+          - Digital and analog circuit design
           - PCB design, rapid prototyping
-          - Cellular, LoRa, RFID communication
+          - Wirelss communication (RFID, LoRa, Bluetooth)
       - title: Software
         description: |
           - Python, Rust, C/C++
-          - Frontend dev (JS/TS, React, web design)
           - Embedded firmware
+          - Frontend dev (JS/TS, React, web design)
 
 {{< /resume >}}

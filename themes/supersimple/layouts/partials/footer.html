@@ -1,24 +1,21 @@
 <footer>
     <div class="footer-image">
-        {{/*  Generate a random number between 1 and 3 to choose a footer  */}}
-        {{ $titleHash := add (crypto.FNV32a .RelPermalink) 1 }}
-        {{ $random := add 1 (mod (int $titleHash) 3) }}
-        {{ $footerImage := printf "svg/footer-%d.svg" $random }}
-        {{ partial $footerImage }}
+        {{/* Generate a random number between 1 and 3 to choose a footer */}} {{
+        $titleHash := add (crypto.FNV32a .RelPermalink) 1 }} {{ $random := add 1
+        (mod (int $titleHash) 3) }} {{ $footerImage := printf
+        "svg/footer-%d.svg" $random }} {{ partial $footerImage }}
     </div>
     <div class="footer-content">
         <div class="footer-col col-1">
-            <div class="footer-label">
-                About
-            </div>
-            I’m an incoming PhD student to MIT EECS. I have a BS in Electrical Engineering from the University of Washington.
+            <div class="footer-label">About</div>
+            I’m a first year PhD student in Signal Kinetics at the MIT Media
+            Lab, focusing on wireless sensing and communication.
             <div class="footer-spacer"></div>
-            I love working on projects involving electronics, software and design.
+            I love working on projects involving electronics, software and
+            design.
         </div>
         <div class="footer-col col-2">
-            <div class="footer-label">
-                Pages
-            </div>
+            <div class="footer-label">Pages</div>
             <ul>
                 {{ range .Site.Menus.main }}
                 <li><a href="{{ .URL }}">{{.Name }}</a></li>
@@ -26,9 +23,7 @@
             </ul>
         </div>
         <div class="footer-col col-3">
-            <div class="footer-label">
-                Connect
-            </div>
+            <div class="footer-label">Connect</div>
             <ul>
                 {{ range .Site.Menus.connect }}
                 <li><a href="{{ .URL }}" target="_blank">{{.Name }}</a></li>
@@ -43,7 +38,7 @@
                 </span>
             </a>
             <div class="footer-year">
-                {{/*  {{ now.Format "2006" }} Rohan Menon  */}}
+                {{/* {{ now.Format "2006" }} Rohan Menon */}}
             </div>
         </div>
     </div>

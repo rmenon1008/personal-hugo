@@ -11,9 +11,6 @@ aside: "This piece sits in my living room, displaying a continuous stream of vid
 
 
 I was heavily inspired by the [Astronaut.io](http://astronaut.io) project, which runs in your browser.
-
-
-Source code will be available soon.
 "
 # links: [
 #     {name: "DTN Simulator", url: "https://github.com/rmenon1008/dcgr_simulation", icon: "github" },
