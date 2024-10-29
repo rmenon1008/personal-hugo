@@ -4,9 +4,9 @@
     {{ $p := $.Page.GetPage . }}
     <div class="lgi">
         <a href="{{$p.RelPermalink}}" class="lgi-link">
-            {{ if and ($p.Params.images) (index $p.Params.images 0) -}}
+            {{ if and (and $p.Params.images (index $p.Params.images 0)) (resources.Get (index $p.Params.images 0)) -}}
             <div class="lgi-img">
-                <img class="batch-load" src="{{ (index $p.Params.images 0) }}" alt="{{$p.Title}}">
+                <img class="batch-load" src='{{ ((resources.Get (index $p.Params.images 0)).Fit "800x800 webp Smart q50").RelPermalink }}' alt="{{$p.Title}}">
             </div>
             {{- end }}
             <div class="lgi-text">
@@ -28,9 +28,9 @@
                 <h2 class="lsi-title">{{ $p.Title }}</h2>
                 <time class="lsi-date">{{$p.Date.Format "Jan 2, 2006"}}</time>
             </div>
-            {{ if and $p.Params.images (index $p.Params.images 0) }}
+            {{ if and (and $p.Params.images (index $p.Params.images 0)) (resources.Get (index $p.Params.images 0)) -}}
             <div class="lsi-img">
-                <img class="batch-load" src="{{(index $p.Params.images 0)}}" alt="{{$p.Title}}">
+                <img class="batch-load" src='{{ ((resources.Get (index $p.Params.images 0)).Fit "800x800 webp Smart q50").RelPermalink }}' alt="{{$p.Title}}">
             </div>
             {{ end }}
         </a>

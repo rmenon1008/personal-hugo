@@ -2,6 +2,7 @@ baseURL = 'https://www.rohanmenon.com/'
 languageCode = 'en-us'
 title = 'Rohan Menon'
 theme = 'supersimple'
+assetDir = 'assets'
 
 [params]
   description = "I’m a PhD student in [Signal Kinetics](https://www.media.mit.edu/groups/signal-kinetics/overview/) at the [MIT Media Lab](https://www.media.mit.edu/). I love working on projects involving electronics, software and design."
@@ -52,10 +53,10 @@ theme = 'supersimple'
 # Static images are mounted to the virtual
 # assets directory. This allows us to use
 # resources.Get to access them.
-[module]
-[[module.mounts]]
-  source = 'static'
-  target = 'assets/static'
+# [module]
+# [[module.mounts]]
+#   source = 'static'
+#   target = 'assets/static'
 # We use this to compute the image dimensions
 # that are statically set in the HTML to
 # avoid layout shifts.

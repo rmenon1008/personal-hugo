@@ -6,11 +6,11 @@
     style="{{ . }}"
 {{ end }}
 >
-    {{ $src := .Get "src" }}
+    {{ $src := ((resources.Get (.Get "src")).Fit "1500x1500 webp Smart q90").RelPermalink }}
     {{- if .Get "link" -}}
         <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- else -}}
-        <a href="{{ $src }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+        <a href="{{ (.Get "src") }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end -}}
     <img src="{{ $src }}"
          {{- if or (.Get "alt") (.Get "caption") }}
@@ -26,10 +26,6 @@
          {{ if .Get "height" }}
             height: {{ .Get "height" }};
             {{- else -}}
-            {{/*  {{ with resources.GetMatch (path.Join "static" $src) }}
-                {{ $calcH := div (mul .Height 42) .Width }}
-                height: {{ $calcH }}rem;
-            {{- end -}}  */}}
             max-height: 30rem;
          {{- end -}}
          {{ if .Get "transparent" }}
