@@ -50,13 +50,13 @@ footer {
                 }
             }
 
+            .footer-spacer {
+                height: 1.05em;
+            }
+
             &.col-1 {
                 flex-basis: 40%;
                 line-height: 1.25;
-
-                .footer-spacer {
-                    height: 1.05em;
-                }
             }
 
             &.col-4 {
@@ -82,7 +82,7 @@ footer {
 
                     &:hover {
                         .footer-arrow {
-                            transform: translateY(-0.10em);
+                            transform: translateY(-0.1em);
                         }
 
                         svg {
