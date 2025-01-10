@@ -4,7 +4,7 @@ date: 2023-05-18T16:31:02-07:00
 draft: false
 
 project-tags: ["design", "software"]
-description: "A Python-based CLI that generates a device mockup from a screenshot"
+description: "Python-based CLI that generates a device mockup from a screenshot"
 hideDate: true
 images: ["/media/mockupception.png"]
 aside: "Install with `pip install mockupgen`

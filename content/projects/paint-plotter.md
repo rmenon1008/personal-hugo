@@ -4,7 +4,7 @@ date: 2024-06-23
 draft: false
 
 project-tags: [design, electronics, software]
-description: "A DIY plotter that paints with watercolors"
+description: "Plotting art with acrylics and watercolors"
 
 hideDate: true
 images: ["/media/paint-plotter.png"]

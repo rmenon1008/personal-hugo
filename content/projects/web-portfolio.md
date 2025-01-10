@@ -1,7 +1,7 @@
 ---
 title: "Web Portfolio"
 date: 2022-11-29T13:55:44-08:00
-draft: false
+draft: true
 project-tags: ["software", "design" ]
 hideDate: true
 description: "My personal website to blog and showcase projects"

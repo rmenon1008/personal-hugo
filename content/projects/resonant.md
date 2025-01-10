@@ -4,7 +4,7 @@ date: 2021-08-21
 draft: false
 
 project-tags: ["academic", "electronics", "software"]
-description: "A hybrid approach to sound positioning and recognition"
+description: "A wearable sound positioning and recognition hat"
 hideDate: true
 aliases: [
     "/projects/resonant/",
