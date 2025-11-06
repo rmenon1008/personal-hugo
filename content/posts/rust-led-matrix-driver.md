@@ -6,6 +6,9 @@ draft: false
 project: "dis/content"
 images: ["/media/led_matrix.png"]
 tags: ["software", "electronics"]
+links: [
+    {"name":"HUB75 Driver for RP2040", "url": "https://github.com/rmenon1008/led_matrix_rp2040_rust", "icon": "github"}
+]
 ---
 
 {{< fig src="/media/led_matrix.png" alt="A low resolution LED matrix with a horse displayed" >}}

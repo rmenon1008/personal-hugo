@@ -5,7 +5,6 @@ draft: false
 
 project-tags: ["academic", "electronics", "software"]
 description: "A wearable sound positioning and recognition hat"
-hideDate: true
 aliases: [
     "/projects/resonant/",
     "/research/resonant/",

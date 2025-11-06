@@ -27,5 +27,5 @@ titleCat: true
 ---
 {{< featured-box
     projects="/projects/underwater-backscatter, /projects/paint-plotter"
-    posts="/posts/rust-led-matrix-driver, /posts/wisp-version-6"
+    posts="/posts/live-underwater-sensing, /posts/rust-led-matrix-driver, /posts/wisp-version-6"
 >}}

@@ -6,7 +6,6 @@ draft: false
 project-tags: [design, electronics, software]
 description: "Plotting art with acrylics and watercolors"
 
-hideDate: true
 images: ["/media/paint-plotter.png"]
 aside: "This is a work in progress. I have much of the hardware and control software done and am now getting my feet wet with generative art."
 ---

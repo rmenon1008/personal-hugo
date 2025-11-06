@@ -1,19 +1,18 @@
 ---
 title: "Underwater Backscatter"
-date: 2024-09-18
+date: 2024-10-18
 draft: false
 
 tags: ["academic", "electronics", "software"]
 description: "Underwater acoustic communication at near zero power"
-hideDate: true
-images: ["/media/underwater_backscatter.jpg"]
+images: ["/media/backscatter_hand.jpg"]
 aside: "This is part of my work as a PhD student at Signal Kinetics, a group at the MIT Media Lab."
 links: [
     {name: "Signal Kinetics", url: "https://www.media.mit.edu/groups/signal-kinetics/overview/", icon: link},
 ]
 ---
 
-{{< fig src="/media/underwater_backscatter.jpg" alt="Temperate extension screenshot">}}
+{{< fig src="/media/backscatter_hand.jpg" alt="Temperate extension screenshot">}}
 
 Today, underwater communication is hard. Radio waves, powering almost all wireless communication in air, can't travel more than a few 10s of meters through water. Alternatively, communicating with sound works well (like dolphins and whales!), however, it takes a large amount energy to send these sound waves long distances. If you're trying to build a sensor to continuously monitor ocean temperatures, or river bacterial levels, this is a problem. A battery powered system would need recharging every few days.
 

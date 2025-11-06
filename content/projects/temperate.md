@@ -5,7 +5,6 @@ draft: false
 
 tags: ["design", "just for fun", "software"]
 description: "A minimal Chrome Extension with the temperature and daily images"
-hideDate: true
 images: ["/media/temperate.webp"]
 aside: "The extension is available from the Chrome Web Store."
 links: [
