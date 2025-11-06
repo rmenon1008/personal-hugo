@@ -3,7 +3,7 @@ title: "Aquametric"
 date: 2021-11-26
 draft: false
 
-project-tags: [academic, electronics, software]
+project-tags: [electronics, software]
 description: "Low cost and distributed stream and river monitoring"
 
 aliases: [

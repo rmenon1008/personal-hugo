@@ -7,9 +7,9 @@ menu: "main"
 aliases: ["/portfolio/"]
 
 hideDate: true
-description: "I’m a first year PhD student in [Signal Kinetics](https://www.media.mit.edu/groups/signal-kinetics/overview/) at the [MIT Media Lab](https://www.media.mit.edu/), focusing on wireless sensing and communication. I love working on projects involving electronics, software and design."
+description: "I’m a second year PhD student in [Signal Kinetics](https://www.media.mit.edu/groups/signal-kinetics/overview/) at the [MIT Media Lab](https://www.media.mit.edu/), focusing on wireless sensing and communication. I love working on projects involving electronics, software and design."
 
-aside: "I’m a first year PhD student in [Signal Kinetics](https://www.media.mit.edu/groups/signal-kinetics/overview/) at the [MIT Media Lab](https://www.media.mit.edu/), focusing on wireless sensing and communication.
+aside: "I’m a second year PhD student in [Signal Kinetics](https://www.media.mit.edu/groups/signal-kinetics/overview/) at the [MIT Media Lab](https://www.media.mit.edu/), focusing on wireless sensing and communication.
 
 
 I love working on projects involving electronics, software and design.
@@ -26,6 +26,6 @@ weight: 1
 titleCat: true
 ---
 {{< featured-box
-    projects="/projects/paint-plotter, /projects/discontent"
-    posts="/projects/lunar-rover-networking, /posts/wisp-desktop, /posts/wisp-version-6"
+    projects="/projects/underwater-backscatter, /projects/paint-plotter"
+    posts="/posts/rust-led-matrix-driver, /posts/wisp-version-6"
 >}}

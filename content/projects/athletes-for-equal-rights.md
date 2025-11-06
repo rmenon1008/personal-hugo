@@ -1,7 +1,7 @@
 ---
 title: "Athletes for Equal Rights"
 date: 2019-07-12
-draft: false
+draft: true
 hideDate: true
 description: "An interactive scrolling timeline and blog"
 images: ["/media/afer.webp"]
