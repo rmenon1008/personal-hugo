@@ -36,7 +36,9 @@
     {{- end }}
     {{- end }}
     {{ $styles := resources.Get "styles/_main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    <!-- <link rel="stylesheet" href="{{ $styles.RelPermalink }}">   Traditional-->
+    <!-- Inlined -->
+    <style>{{ $styles.Content | safeCSS }}</style>
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
 </head>
