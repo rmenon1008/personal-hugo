@@ -7,7 +7,8 @@ project: "Underwater Backscatter"
 images: ["/media/underwater_backscatter.jpg"]
 
 links: [
-    {"name":"Live data from the Charles River", "url": "https://sk-exp-server.mit.edu/", "icon": "link"}
+    {"name":"Live data from the Charles River", "url": "https://sk-exp-server.mit.edu/", "icon": "link"},
+    {"name":"MobiCom 2025 Demo", "url": "/media/mobicom2025demos-final60.pdf", "icon": "pdf"}
 ]
 ---
 
