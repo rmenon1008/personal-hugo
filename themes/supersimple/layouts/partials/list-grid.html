@@ -6,7 +6,7 @@
         <a href="{{.RelPermalink}}" class="lgi-link">
             {{ if and (and .Params.images (index .Params.images 0)) (resources.Get (index .Params.images 0)) }}
             <div class="lgi-img">
-                <img class="batch-load" src='{{ ((resources.Get (index .Params.images 0)).Fit "800x800 webp Smart q50").RelPermalink }}' alt="{{.Title}}">
+                <img class="batch-load" src='{{ ((resources.Get (index .Params.images 0)).Fit "700x700 webp Smart q50").RelPermalink }}' alt="{{.Title}}">
             </div>
             {{- end }}
             <div class="lgi-text">
