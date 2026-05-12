@@ -29,6 +29,4 @@ Importantly, these agents will intelligently work to optimize the network. We're
 
 We published a [workshop paper](https://ieeexplore.ieee.org/abstract/document/10219232) about a novel routing algorithm that considers the physical movement of network agents and their radios. To this end, we build an agent-based model that simulates many agents on the lunar surface.
 
-{{< fig src="/media/dcgr.png" alt="DCGR Simulator" caption="Simulator for the development of RDTN" >}}
-
 Now we're working on a simulator that correctly models RF propagation, consider factors like reflection and diffraction. We hope to be able to train learning-based algorithms that make movement and routing decisions based on the RF environment.

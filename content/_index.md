@@ -17,7 +17,7 @@ I love working on projects involving electronics, software and design.
 <br>
 "
 links: [
-    { name: "Email", url: "mailto:rohan@rohanmenon.com", icon: "mail" },
+    { name: "Email", url: "mailto:rohanme@mit.edu", icon: "mail" },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/rohan-menon-46518415a/", icon: "linkedin" },
     { name: "GitHub", url: "https://github.com/rmenon1008", icon: "github" },
 ]

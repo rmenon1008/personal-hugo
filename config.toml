@@ -27,7 +27,7 @@ assetDir = 'assets'
 [menu]
 [[menu.connect]]
   name = 'Email'
-  url = 'mailto:rohan@rohanmenon.com'
+  url = 'mailto:rohanme@mit.edu'
   weight = -90
   target = '_blank'
 
