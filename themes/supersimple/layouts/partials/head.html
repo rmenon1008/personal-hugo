@@ -35,7 +35,7 @@
     {{- end }}
     {{- end }}
     {{- end }}
-    {{ $styles := resources.Get "styles/_main.scss" | resources.ToCSS (dict "outputStyle" "compressed") | fingerprint }}
+    {{ $styles := resources.Get "styles/_main.scss" | css.Sass (dict "outputStyle" "compressed") | fingerprint }}
     <!-- <link rel="stylesheet" href="{{ $styles.RelPermalink }}">   Traditional-->
     <!-- Inlined -->
     <style>{{ $styles.Content | safeCSS }}</style>

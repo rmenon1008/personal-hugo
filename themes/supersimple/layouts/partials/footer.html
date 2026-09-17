@@ -1,7 +1,7 @@
 <footer>
     <div class="footer-image">
         {{/* Generate a random number between 1 and 3 to choose a footer */}} {{
-        $titleHash := add (crypto.FNV32a .RelPermalink) 1 }} {{ $random := add 1
+        $titleHash := add (hash.FNV32a .RelPermalink) 1 }} {{ $random := add 1
         (mod (int $titleHash) 3) }} {{ $footerImage := printf
         "svg/footer-%d.svg" $random }} {{ partial $footerImage }}
     </div>

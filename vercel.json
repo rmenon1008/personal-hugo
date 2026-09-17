@@ -1,4 +1,9 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "hugo",
+  "installCommand": "",
+  "buildCommand": "bash scripts/build.sh",
+  "outputDirectory": "public",
   "redirects": [
     {
       "source": "/log-book/",
