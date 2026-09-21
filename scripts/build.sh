@@ -23,7 +23,11 @@ if [[ "${VERCEL:-}" == "1" ]]; then
 fi
 
 hugo_info=$(hugo version)
-if [[ "$hugo_info" != "hugo v${hugo_version}+extended"* ]]; then
+# Official releases include a commit hash; Homebrew omits it.
+hugo_build=${hugo_info#hugo v}
+hugo_build=${hugo_build%% *}
+if [[ "${hugo_build%%[-+]*}" != "$hugo_version" ]] ||
+   [[ "$hugo_build" != *+extended && "$hugo_build" != *+extended+* ]]; then
   echo "Expected Hugo ${hugo_version} extended; found: ${hugo_info}" >&2
   exit 1
 fi
